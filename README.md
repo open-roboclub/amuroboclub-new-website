@@ -1,1 +1,1 @@
-# amuroboclub-react
+# AMURoboclub React Application
