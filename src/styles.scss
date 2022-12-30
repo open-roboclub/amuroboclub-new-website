@@ -46,8 +46,8 @@ $yellow:#30302c;
 
 .navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active {
 	color: #fff!important;
-	padding-top: 1px!important;
-	padding-bottom: 1px!important;
+	padding-top: 4px!important;
+	padding-bottom: 4px!important;
 	padding-left: 20px!important;
 	padding-right: 20px!important;
 	margin: 0 20px!important;
@@ -57,8 +57,8 @@ $yellow:#30302c;
 }
 .navbar-light .navbar-nav .nav-link {
 	color: #222!important;
-	padding-top: 1px!important;
-	padding-bottom: 1px!important;
+	padding-top: 4px!important;
+	padding-bottom: 4px!important;
 	padding-left: 20px!important;
 	padding-right: 20px!important;
 	margin: 0 20px!important;
@@ -69,8 +69,8 @@ $yellow:#30302c;
 	&:focus, &:hover {
 		background: $yellow!important;
 		color: #fff!important;
-		padding-top: 1px!important;
-		padding-bottom: 1px!important;
+		padding-top: 5px!important;
+		padding-bottom: 5px!important;
 		padding-left: 20px!important;
 		padding-right: 20px!important;
 		margin: 0 20px;

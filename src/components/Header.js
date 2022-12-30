@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import './styles.css';
+ import Dropdown from 'react-bootstrap/Dropdown';
 
-const Header = ({active, setActive, user}) => {
+const Header = ({active, setActive, user, handleLOgout}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid bg-faded padding-media">
@@ -41,9 +41,52 @@ const Header = ({active, setActive, user}) => {
             </div>
             <div className="row g-3">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <Link to="/login" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
-                      active === "login" ? "active" : ""
-                    }`} onClick={() => setActive("login")}>Login</li></Link>
+              {user?.uid ? (
+                    <>
+                         <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+      <div className="profile-logo">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+        alt="logo"
+        style={{
+          // width: "30px",
+          // height: "30px",
+          // borderRadius: "50%",
+          // marginTop: "12px",
+          width: "25px",
+          height: "25px",
+          objectFit: "cover",
+          borderRadius: "50%",
+        }}
+      />
+    </div>
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item ><p>
+        {user?.displayName}
+      </p></Dropdown.Item>
+        <Dropdown.Item >Another action</Dropdown.Item>
+        <Dropdown.Item ><li className="nav-item nav-link" >
+        Logout
+      </li></Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+                    </>
+                  ) : (
+                    <Link to="/auth" style={{ textDecoration: "none" }}>
+                      <li
+                        className={`nav-item nav-link ${
+                          active === "login" ? "active" : ""
+                        }`}
+                        onClick={() => setActive("login")}
+                      >
+                        Login
+                      </li>
+                    </Link>
+                  )}
+                  
               </ul>
             </div>
         </nav>
