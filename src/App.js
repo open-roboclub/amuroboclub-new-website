@@ -15,12 +15,14 @@ import Header from './components/Header';
 import "react-toastify/dist/ReactToastify.css";
 import './styles.scss';
 import "./media-query.css";
+import { signOut } from 'firebase/auth';
 //import './styles.css';
 
 const App = () => {
   const [active, setActive]= useState('home'); //passing functions, variables as props to child component
   const [user, setUser] = useState(null);
-
+  const navigate= useNavigate();
+  
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -30,9 +32,18 @@ const App = () => {
       }
     });
   }, []);
+
+  const handleLogout= ()=>{
+     signOut(auth).then(()=>{
+      setUser(null);
+      setActive("login");
+      navigate("/auth");
+     })
+  };
+
   return (
     <div>
-      <Header setActive={setActive} active={active} user={user} />
+      <Header setActive={setActive} active={active} user={user} handleLogout={handleLogout}/>
       <ToastContainer position='top-center' />
     <Routes>
       <Route path="/" element={<Home />} />
