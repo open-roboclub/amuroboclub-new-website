@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const Header = ({active, setActive, user, handleLOgout}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src={ require('../pages/images/logo.jpeg')} alt="image" /></a></div>
     <div className="container-fluid bg-faded padding-media">
       <div className="container padding-media">
         <nav className="navbar navbar-toggleable-md navbar-light">

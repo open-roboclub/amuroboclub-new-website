@@ -16,18 +16,15 @@ const Home = () => {
         <div className="container-fluid">
             {/* <div className="row"> */}
                 <div className="pogoSlider" id="js-main-slider">
-                <img src={ require('./images/banner_img.png')} alt="" height={500} width={1500}/>
-                </div>
-            {/* </div> */}
-        </div>
-    </div>
-	<div className="section tabbar_menu" style={{background: ""}}>
+                <img src={ require('./images/banner_img.png')} alt="" height={600} width={1500}/>
+                <div></div>
+                <div className="section tabbar_menu">
 	   <div className="container">
-	      <div className="row">
-		      <div className="col-md-12">
+	      <div className="row" >
+		      <div className="col-md-12" >
 			     <div className="tab_menu">
 				    <ul>
-					   <li><a href="#"><span className="icon" ></span><span>University Life</span></a></li>
+					   <li><a href="#"><span className="icon" ></span><span><i class="fa-regular fa-trophy-star"><button></button></i></span></a></li>
 					   <li><a href="#"><span className="icon"></span><span>Graduation</span></a></li>
 					   <li><a href="#"><span className="icon"></span><span>Athletics</span></a></li>
 					   <li><a href="#"><span className="icon"></span><span>Social</span></a></li>
@@ -40,6 +37,11 @@ const Home = () => {
 		  </div>
 	   </div>
 	</div>
+                </div>
+            {/* </div> */}
+        </div>
+    </div>
+
 	{/* <!-- end section -->
 	<!-- section --> */}
     <div className="section margin-top_50">
@@ -48,7 +50,7 @@ const Home = () => {
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
                         <div className="heading_main text_align_left">
-						   <h2><span>Welcome To</span> Education</h2>
+						   <h2>Welcome to AMURoboclub</h2>
                         </div>
 						<div className="full">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
