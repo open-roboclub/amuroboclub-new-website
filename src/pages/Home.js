@@ -24,7 +24,7 @@ const Home = () => {
 		      <div className="col-md-12" >
 			     <div className="tab_menu">
 				    <ul>
-					   <li><a href="#"><span className="icon" ></span><span><i class="fa-regular fa-trophy-star"><button></button></i></span></a></li>
+					   <li><a href="#"><span className="icon" ></span><span>Achievements</span></a></li>
 					   <li><a href="#"><span className="icon"></span><span>Graduation</span></a></li>
 					   <li><a href="#"><span className="icon"></span><span>Athletics</span></a></li>
 					   <li><a href="#"><span className="icon"></span><span>Social</span></a></li>
@@ -65,7 +65,7 @@ const Home = () => {
                 </div>
 				<div className="col-md-6">
                     <div className="full">
-                        <img src="images/img2.png" alt="#" />
+                        <img src={require("./images/Team.jpeg")} alt="#" />
                     </div>
                 </div>
             </div>
@@ -79,13 +79,13 @@ const Home = () => {
                 <div className="col-md-12">
                     <div className="full">
                         <div className="heading_main text_align_center">
-						   <h2><span>Popular </span>Courses</h2>
+						   <h2>Projects</h2>
                         </div>
 					  </div>
                 </div>
 				<div className="col-md-4">
                     <div className="full blog_img_popular">
-                       <img className="img-responsive" src="images/p1.png" alt="#" /> 
+                       <img className="img-responsive" src={require("./images/p1.png")} alt="#" /> 
 					   <h4>Financial Accounting</h4>
                     </div>
                 </div>
