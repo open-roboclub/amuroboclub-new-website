@@ -3,12 +3,23 @@ import Footer from '../components/Footer';
 import './css/bootstrap.min.css';
 import './css/pogo-slider.min.css';
 import './css/style.css';
-import './css/style.css';
-import './css/responsive.css';
 import './css/custom.css';
+import './css/responsive.css';
+import './css/responsiveslides.css';
+import './css/custom.css';
+import SimpleImageSlider from "react-simple-image-slider";
 import { grey, pink } from '@material-ui/core/colors';
+import content from "../assets/cms/content.json"
 
 const Home = () => {
+    const images = [
+        { url: "http://localhost:3000/assets/images/NBAteam.jpeg", title: "beach" },
+        { url: "http://localhost:3000/assets/images/Alumniday.jpeg", title: "boat" },
+        { url: "http://localhost:3000/assets/images/Team.jpeg", title: "forest" },
+        { url: "http://localhost:3000/assets/imagesimage-4.jpg", title: "city" },
+        { url: "http://localhost:3000/assets/images/image-5.jpg", title: "italy" },
+      ];
+   
   return (
     <>
     
@@ -16,8 +27,7 @@ const Home = () => {
         <div className="container-fluid">
             {/* <div className="row"> */}
                 <div className="pogoSlider" id="js-main-slider">
-                <img src={ require('./images/banner_img.png')} alt="" height={600} width={1500}/>
-                <div></div>
+                <img src={ require('../assets/images/banner_img.png')} alt="" height={600} width={1500} />
                 <div className="section tabbar_menu">
 	   <div className="container">
 	      <div className="row" >
@@ -25,12 +35,12 @@ const Home = () => {
 			     <div className="tab_menu">
 				    <ul>
 					   <li><a href="#"><span className="icon" ></span><span>Achievements</span></a></li>
-					   <li><a href="#"><span className="icon"></span><span>Graduation</span></a></li>
-					   <li><a href="#"><span className="icon"></span><span>Athletics</span></a></li>
-					   <li><a href="#"><span className="icon"></span><span>Social</span></a></li>
-					   <li><a href="#"><span className="icon"></span><span>Location</span></a></li>
-					   <li><a href="#"><span className="icon"></span><span>Call us</span></a></li>
-					   <li><a href="#"><span className="icon"></span><span>Email</span></a></li>
+					   <li><a href="#"><span className="icon"></span><span>Events</span></a></li>
+					   <li><a href="#"><span className="icon"></span><span>Projects</span></a></li>
+             <li><a href="#"><span className="icon"></span><span>Newsletter</span></a></li>
+					   <li><a href="#"><span className="icon"></span><span>Visit us</span></a></li>
+					   <li><a href="#"><span className="icon"></span><span>Contact us</span></a></li>
+             <li><a href="#"><span className="icon"></span><span>Contribute</span></a></li>
 					</ul>
 				 </div>
 			  </div>
@@ -52,12 +62,7 @@ const Home = () => {
                         <div className="heading_main text_align_left">
 						   <h2>Welcome to AMURoboclub</h2>
                         </div>
-						<div className="full">
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-						</div>
+						  <p>{content[0].about}</p>
 						<div className="full">
 						   <a className="hvr-radial-out button-theme" href="#">About more</a>
 						</div>
@@ -65,13 +70,29 @@ const Home = () => {
                 </div>
 				<div className="col-md-6">
                     <div className="full">
-                        <img src={require("./images/Team.jpeg")} alt="#" />
+                        <img src={require("../assets/images/Team.jpeg")} alt="#" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-	{/* <!-- end section -->
+    
+
+    <div style={{paddingLeft: "170px"}}>
+      <SimpleImageSlider
+        width={1200}
+        height={900}
+        images={images}
+        showBullets={true}
+        showNavs={true}
+        navSize={80}
+        slideDuration={0.7}
+        autoPlay={true}
+        autoPlayDelay={2}
+      />
+    </div>
+    
+	{/* <!-- end section --
 	<!-- section --> */}
     <div className="section layout_padding">
         <div className="container">
@@ -85,20 +106,20 @@ const Home = () => {
                 </div>
 				<div className="col-md-4">
                     <div className="full blog_img_popular">
-                       <img className="img-responsive" src={require("./images/p1.png")} alt="#" /> 
-					   <h4>Financial Accounting</h4>
+                       {/* <img className="img-responsive" src={require("../assets/images/p1.png")} alt="#" />  */}
+					   <h4>Project1</h4>
                     </div>
                 </div>
 				<div className="col-md-4">
                     <div className="full blog_img_popular">
-                        <img className="img-responsive" src="images/p2.png" alt="#" />
-						<h4>Managerial Accounting</h4>
+                        {/* <img className="img-responsive" src="images/p2.png" alt="#" /> */}
+						<h4>Project2</h4>
                     </div>
                 </div>
 				<div className="col-md-4">
                     <div className="full blog_img_popular">
-                        <img className="img-responsive" src="images/p3.png" alt="#" />
-						<h4>Intermediate Accounting</h4>
+                        {/* <img className="img-responsive" src="images/p3.png" alt="#" /> */}
+						<h4>Project3</h4>
                     </div>
                 </div>
             </div>
@@ -111,22 +132,22 @@ const Home = () => {
             <div className="row">
 			    <div className="col-md-6">
                     <div className="full float-right_img">
-                        <img src="images/img6.png" alt="#" />
+                        {/* <img src="images/img6.png" alt="#" /> */}
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
                         <div className="heading_main text_align_left">
-						   <h2><span>Apply for Admission</span></h2>
+						   {/* <h2><span>Apply for Admission</span></h2> */}
                         </div>
-						<div className="full">
+						{/* <div className="full">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
 						  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
 						  sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-						</div>
+						</div> */}
 						<div className="full">
-						   <a className="hvr-radial-out button-theme" href="#">Apply</a>
+						   {/* <a className="hvr-radial-out button-theme" href="#">Apply</a> */}
 						</div>
                     </div>
                 </div>
@@ -141,21 +162,21 @@ const Home = () => {
                 <div className="col-md-6">
                     <div className="full">
                         <div className="heading_main text_align_left">
-						   <h2><span>Reaserch</span></h2>
+						   {/* <h2><span>Reaserch</span></h2> */}
                         </div>
-						<div className="full">
+						{/* <div className="full">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
 						  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-						</div>
+						</div> */}
 						<div className="full">
-						   <a className="hvr-radial-out button-theme" href="#">See More</a>
+						   {/* <a className="hvr-radial-out button-theme" href="#">See More</a> */}
 						</div>
                     </div>
                 </div>
 				<div className="col-md-6">
                     <div className="full">
-                        <img className="img-responsive" src="images/img7.png" alt="#" />
+                        {/* <img className="img-responsive" src="images/img7.png" alt="#" /> */}
                     </div>
                 </div>
             </div>
@@ -163,76 +184,19 @@ const Home = () => {
     </div>
 	{/* <!-- end section -->
 	<!-- section --> */}
-    <div className="section layout_padding padding_bottom-0">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
-                    <div className="full">
-                        <div className="heading_main text_align_center">
-						   <h2><span>News</span></h2>
-                        </div>
-					  </div>
-                </div>
-			  </div>
-               <div className="row">
-                <div className="col-lg-12">
-                    <div id="demo" className="carousel slide" data-ride="carousel">
+   
+   
 
-                        {/* <!-- The slideshow --> */}
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-sm-12">
-									   <div className="full blog_img_popular">
-                                          <img className="img-responsive" src="images/img9.png" alt="#" />
-										  <h4>Technology</h4>
-										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-										</div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-12">
-                                        <div className="full blog_img_popular">
-                                          <img className="img-responsive" src="images/img8.png" alt="#" />
-										  <h4>Education</h4>
-										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-										</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-sm-12">
-									   <div className="full blog_img_popular">
-                                          <img className="img-responsive" src="images/img9.png" alt="#" />
-										  <h4>Technology</h4>
-										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-										</div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-12">
-                                        <div className="full blog_img_popular">
-                                          <img className="img-responsive" src="images/img8.png" alt="#" />
-										  <h4>Education</h4>
-										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-										</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* <!-- Left and right controls --> */}
-                        <a className="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span className="carousel-control-prev-icon"></span>
-                        </a>
-                        <a className="carousel-control-next" href="#demo" data-slide="next">
-                            <span className="carousel-control-next-icon"></span>
-                        </a>
 
-                    </div>
-                </div>
 
-            </div>			  
-           </div>
-        </div>
-    <Footer />
+
+
+    <div style={{paddingTop:"70px"}}>
+    <Footer /></div>
+             
+
+    
     </>
   )
 }
