@@ -13,11 +13,11 @@ import content from "../assets/cms/content.json"
 
 const Home = () => {
     const images = [
-        { url: "http://localhost:3000/assets/images/NBAteam.jpeg", title: "beach" },
-        { url: "http://localhost:3000/assets/images/Alumniday.jpeg", title: "boat" },
-        { url: "http://localhost:3000/assets/images/Team.jpeg", title: "forest" },
-        { url: "http://localhost:3000/assets/imagesimage-4.jpg", title: "city" },
-        { url: "http://localhost:3000/assets/images/image-5.jpg", title: "italy" },
+        { url: "../assets/images/NBAteam.jpeg", title: "beach" },
+        { url: "../assets/images/Alumniday.jpeg", title: "boat" },
+        { url: "../assets/images/Team.jpeg", title: "forest" },
+        { url: "../assets/images/Alumniday.jpeg", title: "city" },
+        { url: "../assets/images/NBAteam.jpeg", title: "italy" },
       ];
    
   return (
@@ -76,12 +76,14 @@ const Home = () => {
             </div>
         </div>
     </div>
-    
+    <div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
+						   <h2>Photo Gallery</h2>
+                        </div>
 
-    <div style={{paddingLeft: "170px"}}>
+    <div style={{paddingLeft: "302px"}}>
       <SimpleImageSlider
-        width={1200}
-        height={900}
+        width={900}
+        height={600}
         images={images}
         showBullets={true}
         showNavs={true}
@@ -127,33 +129,33 @@ const Home = () => {
     </div>
 	{/* <!-- end section -->
 	<!-- section --> */}
-    <div className="section margin-top_50 silver_bg">
+    {/* <div className="section margin-top_50 silver_bg">
         <div className="container">
             <div className="row">
 			    <div className="col-md-6">
                     <div className="full float-right_img">
                         {/* <img src="images/img6.png" alt="#" /> */}
-                    </div>
-                </div>
-                <div className="col-md-6 layout_padding_2">
-                    <div className="full">
-                        <div className="heading_main text_align_left">
+                    {/* </div> */}
+                {/* // </div> */}
+                {/* // <div className="col-md-6 layout_padding_2"> */}
+                    {/* // <div className="full"> */}
+                        {/* <div className="heading_main text_align_left"> */} 
 						   {/* <h2><span>Apply for Admission</span></h2> */}
-                        </div>
+                        {/* </div> */}
 						{/* <div className="full">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
 						  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
 						  sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 						</div> */}
-						<div className="full">
+						{/* <div className="full"> */}
 						   {/* <a className="hvr-radial-out button-theme" href="#">Apply</a> */}
-						</div>
+						{/* </div>
                     </div>
                 </div>
 			</div>
         </div>
-    </div>
+    </div> */}
 	{/* <!-- end section -->
 	<!-- section --> */}
     <div className="section layout_padding padding_bottom-0">
