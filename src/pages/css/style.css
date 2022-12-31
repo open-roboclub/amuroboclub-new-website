@@ -215,7 +215,7 @@ button:focus {
 	animation-delay: 0s;
 	animation-delay: 0s;
 	animation-delay: 0s;
-	background-image: url('../images/banner_img.png');
+	background-image: url('');
 	background-size: 100% 100%;
 }
 
@@ -679,7 +679,7 @@ a.navbar-brand img {
     height: 70px;
     background: rgb(239, 233, 233);
     float: left;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: -50px;
     position: relative;
     z-index: 9;
@@ -698,6 +698,18 @@ a.navbar-brand img {
     background: rgb(30, 28, 28);
     transform: skew(-30deg);
 	color:#fff;
+}
+
+.tab_menu ul li:nth-child(4) {
+    background: rgb(30, 28, 28);
+    transform: skew(-30deg);
+	color:#fff;
+}
+
+.tab_menu ul li:nth-child(4) a {
+    transform: skew(30deg);
+	float: left;
+	color: #fff;
 }
 
 .tab_menu ul li:nth-child(7) a,.tab_menu ul li:nth-child(5) a {
@@ -763,7 +775,7 @@ span.icon img {
 	left: -100%;
 	width: 200%;
 	height: 100%;
-	background: url(../images/banner_img.png) repeat-x center center;
+	background: url("") repeat-x center center;
 	background-size: 50% auto;
 }
 
@@ -1836,7 +1848,7 @@ p {
     margin: 0 0 30px 0;
     font-family: 'Raleway', sans-serif;
     position: relative;
-    background-image: url(../images/heading_main_border.png);
+    background-image: url("");
     background-position: left bottom;
     background-repeat: no-repeat;
 }
@@ -2111,7 +2123,7 @@ ul.bottom_menu li {
 	background-color: #f9f9f9;
 	min-height: 150px;
 	text-align: center;
-	background-image: url("../images/banner_img.png");
+	background-image: url("");
 	background-size: cover;
 	background-position: center center;
 }
