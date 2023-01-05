@@ -23,9 +23,11 @@ const Footer = () => {
                             <li><a href="#">Careers</a></li> */}
                         </ul>
                     </div>
-                    <div className="col-md-6 item text">
-                        {/* <h3 style={{color: "white"}}>Company Name</h3> */}
-                    </div>
+                    <div className="heading_main text_align_center" >
+                    <h3 style={{color: "white", fontSize: "40px"}}><i class="fa-regular fa-copyright"></i> AMU RoboClub 2022-23</h3>
+                        </div>
+                       
+                    
                     <div className="col item social"><a href="#"><i className="icon ion-social-facebook"></i></a><a href="#"><i className="icon ion-social-twitter"></i></a><a href="#"><i className="icon ion-social-snapchat"></i></a><a href="#"><i className="icon ion-social-instagram"></i></a></div>
                 </div>
                 <p className="copyright"></p>
