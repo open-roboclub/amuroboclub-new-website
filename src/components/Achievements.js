@@ -14,7 +14,7 @@ const Achievements = () => {
          <div class="row">
             <div class="col-md-4 col-sm-6">
                <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} alt="#" height={85} width={125} />
+                  <img src={require("../assets/images/robocon.png")} style={{marginLeft:"10px"}} alt="#" height={85} width={125} />
                   <h3>Robocon 2020</h3>
                   <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
                </div>
