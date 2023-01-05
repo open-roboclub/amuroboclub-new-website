@@ -874,6 +874,92 @@ span.icon img {
 	height: 500px;
 }
 
+
+
+
+/* for button on top */
+.hvr-radial-out1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    background: #3f3d3d;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    color: #fff;
+    float: left;
+    width: 165px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-indent: -10px;
+}
+
+.hvr-radial-out1:after {
+    content: "";
+    display: flex;
+    width: 25px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: -6px;
+    transform: skew(-20deg);
+}
+
+.hvr-radial-out1::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #070500;
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.hvr-radial-out1:hover::before,
+.hvr-radial-out1:focus::before,
+.hvr-radial-out1:active::before {
+	-webkit-transform: scale(2);
+	transform: scale(2);
+}
+
+a.hvr-radial-out1:hover,
+a.hvr-radial-out1:focus {
+	color: #fff;
+}
+
+a#scroll-to-top::after {
+    display: none;
+}
+
+.silver_bg .hvr-radial-out1:after {
+    background: #eee;
+}
+
+
+/* for other buttons */
+
+
+
 .hvr-radial-out {
     display: inline-block;
     vertical-align: middle;
@@ -882,7 +968,7 @@ span.icon img {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
     overflow: hidden;
-    background: #095a83;
+    background: #3f3d3d;
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
@@ -2257,3 +2343,84 @@ section.inner_banner h3 {
 	background: #fff;
 	color: #12385b;
 }
+
+
+
+
+
+
+
+
+
+
+/** banner section **/
+
+.banner_main {
+	padding: 60px 0 0px 0;
+	background: url(./../../assets/images/banner_img.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+
+.text-bg {
+	text-align: left;
+	padding-top: 120px;
+}
+
+.text-bg h1 {
+	color: #fff;
+	font-size: 60px;
+	line-height: 70px;
+	font-weight: bold;
+}
+
+/* .text-bg span {
+	line-height: 28px;
+	padding-bottom: 20px;
+	display: block;
+	color: #f2db18;
+	font-size: 30px;
+	font-weight: 600;
+} */
+
+.text-bg p {
+	line-height: 28px;
+	padding-bottom: 70px;
+	display: block;
+	color: #fff;
+	font-size: 17px;
+}
+
+.text-bg a {
+	font-size: 25px;
+	color: #fff;
+	font-weight: 600;
+	text-align: left;
+	display: inline-block;
+	transition: ease-in all 0.5s;
+	position: relative;
+	line-height: 1px;
+}
+
+/* .text-bg a::before {
+	position: absolute;
+	content: "";
+	top: 3px;
+	border-right: #ffff00 solid 1px;
+	border-width: 90px;
+	height: 1px;
+	right: -111px;
+} */
+
+.text-bg a:hover {
+	color: #fff;
+	transition: ease-in all 0.5s;
+}
+
+.ban_img figure {
+	margin: 0;
+}
+
+
+/** end banner section **/
