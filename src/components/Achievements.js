@@ -11,28 +11,18 @@ const Achievements = () => {
 						   <h2>Achievements</h2>
                         </div>
          </div>
+
+
          <div class="row">
             <div class="col-md-4 col-sm-6">
                <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} style={{marginLeft:"10px"}} alt="#" height={85} width={125} />
-                  <h3>Robocon 2020</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
+                  <img src={require("../assets/images/robocon.png")} style={{marginLeft:"15px"}} alt="#" height={85} width={125} />
+                  <h3 style={{marginLeft:"15px"}}>Robocon 2020</h3>
+                  <p style={{marginLeft:"15px"}}>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
                </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-               <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} alt="#" height={85} width={125} />
-                  <h3>Robocon 2019</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
-               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-               <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} alt="#" height={85} width={125} />
-                  <h3>Robocon 2018</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
-               </div>
-            </div>
+            
+           
             
            
          </div>
