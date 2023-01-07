@@ -27,15 +27,13 @@ const Header = ({active, setActive, user, handleLOgout}) => {
               <Link to="/" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "home" ? "active" : ""
                     }`} onClick={() => setActive("home")}>Home</li></Link>
-              <Link to="/about" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${//three are names of route
-                      active === "about" ? "active" : ""
-                    }`} onClick={() => setActive("about")}>About</li></Link>
+              
               <Link to="/blogs" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "blogs" ? "active" : ""
                     }`} onClick={() => setActive("blogs")}>Blogs</li></Link>
               <Link to="/contact" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "contact" ? "active" : ""
-                    }`} onClick={() => setActive("contact")}>Contact</li></Link>
+                    }`} onClick={() => setActive("contact")}>Contribute<i style={{marginLeft:"5px"}} class="fa-solid fa-heart"></i></li></Link>
               {/* <Link to="/join-us" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "join-us" ? "active" : ""
                     }`} onClick={() => setActive("join-us")}>Join</li></Link>       */}
