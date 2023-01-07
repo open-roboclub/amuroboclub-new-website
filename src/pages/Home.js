@@ -43,7 +43,7 @@ const Home = () => {
          <div className="row">
             <div className="col-md-7 col-lg-7">
                <div className="text-bg">
-                  <h1 style={{opacity: "0"}}>Trusted and <br/><br/>Professional Advisers</h1>
+                  <h1 style={{opacity: "0"}}>Trusted and <br/><br/><br/>Professional Advisers</h1>
                   
                   
                   
