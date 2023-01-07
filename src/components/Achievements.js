@@ -1,4 +1,5 @@
 import React from 'react'
+import content from "../assets/cms/content.json"
 
 const Achievements = () => {
   return (
@@ -11,31 +12,24 @@ const Achievements = () => {
 						   <h2>Achievements</h2>
                         </div>
          </div>
-         <div class="row">
-            <div class="col-md-4 col-sm-6">
-               <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} style={{marginLeft:"10px"}} alt="#" height={85} width={125} />
-                  <h3>Robocon 2020</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
-               </div>
+
+
+         
+         <div  className="row">
+            {content[0].achievements.map((object, index) => (
+         
+         <div className="col-md-4 col-sm-6">
+            <div key={index}id="ho_color" class="service_box">
+               {/* <img src={object.image} style={{marginLeft:"15px", height: "140px", width: "140px"}}  alt="#" height={85} width={125} /> */}
+               {/* <h3 style={{marginLeft:"15px"}}>{object.text}</h3> */}
+               <p style={{marginLeft:"15px"}}>{object.text}</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-               <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} alt="#" height={85} width={125} />
-                  <h3>Robocon 2019</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
-               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-               <div id="ho_color" class="service_box">
-                  <img src={require("../assets/images/robocon.png")} alt="#" height={85} width={125} />
-                  <h3>Robocon 2018</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
-               </div>
-            </div>
-            
-           
          </div>
+         
+      ))}
+            </div>
+           
+         
       </div>
    </div>
    </div>

@@ -8,6 +8,7 @@ import './css/responsive.css';
 import './css/responsiveslides.css';
 import './css/custom.css';
 import Achievements from '../components/Achievements';
+import Benefits from '../components/Benefits';
 
 
 import SimpleImageSlider from "react-simple-image-slider";
@@ -162,15 +163,7 @@ const Home = () => {
 			   
                 
                        
-                    <div className="heading_main text_align_center" id='benefits'>
-						   <h2>Benefits</h2>
-                        </div>
-						<div class="full">
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-						  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-						  sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-						</div>
+                   
 						</div>
         </div>
     </div>
@@ -181,7 +174,7 @@ const Home = () => {
 
 
 
-
+<Benefits/>
 
 
 
