@@ -447,7 +447,7 @@ a.navbar-brand img {
     overflow: scroll;
 }
 .tab_menu ul {
-    width: 950px;
+    width: 1100px;
 }
 .full > img {
     width: 100%;
@@ -685,41 +685,41 @@ a.navbar-brand img {
     z-index: 9;
     box-shadow: 0px 0 14px 0 rgba(0,0,0,.3);
     overflow: hidden;
-    padding: 0 30px;
+    padding: 0;
 }
 
-.tab_menu ul li:nth-child(7),.tab_menu ul li:nth-child(5) {
+.tab_menu ul li:nth-child(1),.tab_menu ul li:nth-child(2) {
     background: rgb(30, 28, 28);
-    transform: skew(-30deg);
-	color:#fff;
-}
-
-.tab_menu ul li:nth-child(6) {
-    background: rgb(30, 28, 28);
-    transform: skew(-30deg);
+    transform: skew(0deg);
 	color:#fff;
 }
 
 .tab_menu ul li:nth-child(4) {
     background: rgb(30, 28, 28);
-    transform: skew(-30deg);
+    transform: skew(0deg);
 	color:#fff;
 }
 
+.tab_menu ul li:nth-child(3) {
+    background: rgb(30, 28, 28);
+    transform: skew(deg);
+	color:#fff;
+}
+
+.tab_menu ul li:nth-child(3) a {
+    transform: skew(0deg);
+	float: left;
+	color: #fff;
+}
+
+.tab_menu ul li:nth-child(1) a,.tab_menu ul li:nth-child(2) a {
+    transform: skew(0deg);
+	float: left;
+	color: #fff;
+}
+
 .tab_menu ul li:nth-child(4) a {
-    transform: skew(30deg);
-	float: left;
-	color: #fff;
-}
-
-.tab_menu ul li:nth-child(7) a,.tab_menu ul li:nth-child(5) a {
-    transform: skew(30deg);
-	float: left;
-	color: #fff;
-}
-
-.tab_menu ul li:nth-child(6) a {
-    transform: skew(30deg);
+    transform: skew(0deg);
 	float: left;
 	color: #fff;
 }
@@ -2357,7 +2357,7 @@ section.inner_banner h3 {
 
 .banner_main {
 	padding: 60px 0 0px 0;
-	background: url(./../../assets/images/banner_img.png);
+	background: url(./../../assets/images/wallpaper.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	opacity: 1;

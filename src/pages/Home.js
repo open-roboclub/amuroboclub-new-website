@@ -9,7 +9,7 @@ import './css/responsiveslides.css';
 import './css/custom.css';
 import Achievements from '../components/Achievements';
 import Benefits from '../components/Benefits';
-
+import Location from '../components/Location';
 
 import SimpleImageSlider from "react-simple-image-slider";
 import Modals from '../components/Modals';
@@ -43,7 +43,7 @@ const Home = () => {
          <div className="row">
             <div className="col-md-7 col-lg-7">
                <div className="text-bg">
-                  <h1 style={{opacity: "0"}}>Trusted and <br/>Professional Advisers</h1>
+                  <h1 style={{opacity: "0"}}>Trusted and <br/><br/>Professional Advisers</h1>
                   
                   
                   
@@ -67,13 +67,18 @@ const Home = () => {
 		      <div class="col-md-12">
 			     <div class="tab_menu">
 				    <ul>
-					  <AnchorLink href='#achievements'> <li><a href="#"><span class="icon"></span><span>Achievements</span></a></li></AnchorLink>
-                       <AnchorLink href='#benefits'> <li><a href="#"><span class="icon"></span><span>Benefits</span></a></li></AnchorLink>
-					   <li><a href="#"><span class="icon"></span><span>Events</span></a></li>
-					   <li><a href="#"><span class="icon"></span><span>Newsletter</span></a></li>
-					   <li><a href="#"><span class="icon"></span><span>Location</span></a></li>
-					   <li><a href="#"><span class="icon"></span><span>Call us</span></a></li>
+					  <AnchorLink href='#achievements'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"8px"}}>Achievements</span></a></li></AnchorLink>
+                       <AnchorLink href='#benefits'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"24px"}}>Benefits</span></a></li></AnchorLink>
+					   <li><a href="#"><span class="icon"></span><span style={{marginLeft:"16px"}}>Events</span></a></li>
+					   <li><a href="#"><span>Team</span></a></li>
+					   <li><a  type="button"  data-toggle="modal" data-target="#modalRegular"><span style={{color: "black"}}> Location</span></a></li>
 					   <li><a href="#"><span class="icon"></span><span>Email</span></a></li>
+					   <li><a href="#"><span class="icon"></span><span>Newsletter</span></a></li>
+                       
+                       
+                       
+                    
+                       
 					</ul>
 				 </div>
 			  </div>
@@ -177,7 +182,7 @@ const Home = () => {
 <Benefits/>
 
 
-
+<Location/>
 
 
 
