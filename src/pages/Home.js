@@ -7,10 +7,11 @@ import './css/custom.css';
 import './css/responsive.css';
 import './css/responsiveslides.css';
 import './css/custom.css';
+import Team from '../components/Team';
 import Achievements from '../components/Achievements';
 import Benefits from '../components/Benefits';
 import Location from '../components/Location';
-
+import Email from '../components/Email';
 import SimpleImageSlider from "react-simple-image-slider";
 import Modals from '../components/Modals';
 import Cards from '../components/Cards';
@@ -24,7 +25,7 @@ import Carousel from 'react-bootstrap/Carousel';
 // import { grey, pink, red } from '@material-ui/core/colors';
 import content from "../assets/cms/content.json"
 // import PhotoGallery from '../components/PhotoGallery';
-
+console.log(process.env.REACT_APP_apiKey);
 const Home = () => {
     const images = [
         { url: "../assets/images/NBAteam.jpeg", title: "beach" },
@@ -43,7 +44,7 @@ const Home = () => {
          <div className="row">
             <div className="col-md-7 col-lg-7">
                <div className="text-bg">
-                  <h1 style={{opacity: "0"}}>Trusted and <br/><br/><br/>Professional Advisers</h1>
+                  <h1 style={{opacity: "0"}}>Trusted and <br/><br/>Professional Advisers</h1>
                   
                   
                   
@@ -70,14 +71,16 @@ const Home = () => {
 					  <AnchorLink href='#achievements'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"8px"}}>Achievements</span></a></li></AnchorLink>
                        <AnchorLink href='#benefits'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"24px"}}>Benefits</span></a></li></AnchorLink>
 					   <li><a href="#"><span class="icon"></span><span style={{marginLeft:"16px"}}>Events</span></a></li>
-					   <li><a href="#"><span>Team</span></a></li>
+                       <AnchorLink href='#team'> <li><a href="#"><span>Team</span></a></li></AnchorLink>
 					   <li><a  type="button"  data-toggle="modal" data-target="#modalRegular"><span style={{color: "black"}}> Location</span></a></li>
-					   <li><a href="#"><span class="icon"></span><span>Email</span></a></li>
+					   <li><a href="#" data-toggle="modal" data-target="#modalContactForm"><span class="icon"></span><span>Email</span></a></li>
 					   <li><a href="#"><span class="icon"></span><span>Newsletter</span></a></li>
                        
                        
                        
-                    
+                       
+
+
                        
 					</ul>
 				 </div>
@@ -95,12 +98,10 @@ const Home = () => {
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
                         <div className="heading_main text_align_left">
-						   <h2>Welcome to AMURoboclub</h2>
+						   <h2>What is AMURoboclub &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
                         </div>
 						  <p>{content[0].about}</p>
-						<div className="full">
-						   <a className="hvr-radial-out button-theme" href="#">About more</a>
-						</div>
+						
                     </div>
                 </div>
 				<div className="col-md-6">
@@ -111,6 +112,47 @@ const Home = () => {
             </div>
         </div>
     </div>
+    
+
+
+
+
+
+
+
+    <div className="section margin-top_50" style={{paddingTop:"60px"}}>
+        <div className="container">
+            <div className="row">
+            <div className="col-md-6">
+                    <div className="full" style={{paddingTop: "80px"}}>
+                        <img src={require("../assets/images/wallpaper.png")} alt="#" style={{height:"490px"}}/>
+                    </div>
+                </div>
+                <div className="col-md-6 layout_padding_2">
+                    <div className="full">
+                        <div className="heading_main text_align_right">
+						   <h2>Why Join Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           &nbsp;&nbsp; </h2>
+                        </div>
+						  <p>{content[0].whyjoin}</p>
+						
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
 						   <h2>Photo Gallery</h2>
                         </div>
@@ -149,7 +191,7 @@ const Home = () => {
 
 
 
-
+<Benefits/>
 
    
     
@@ -177,10 +219,56 @@ const Home = () => {
 
 
 
+    <div id='email'>
+      <div className="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+      <div className="modal-header text-center">
+        <h4 className="modal-title w-100 font-weight-bold">Write to us</h4>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div className="modal-body mx-3">
+        <div className="md-form mb-5">
+          <i className="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" className="form-control validate"/>
+          <label data-error="wrong" data-success="right" for="form34">Your name</label>
+        </div>
+
+        <div className="md-form mb-5">
+          <i className="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form29" className="form-control validate"/>
+          <label data-error="wrong" data-success="right" for="form29">Your email</label>
+        </div>
+
+        <div className="md-form mb-5">
+          <i className="fas fa-tag prefix grey-text"></i>
+          <input type="text" id="form32" className="form-control validate"/>
+          <label data-error="wrong" data-success="right" for="form32">Subject</label>
+        </div>
+
+        <div className="md-form">
+          <i className="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" className="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Your message</label>
+        </div>
+
+      </div>
+      <div className="modal-footer d-flex justify-content-center">
+        <button className="btn btn-unique">Send <i className="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<Benefits/>
+    </div>
 
+
+
+<Team/>
 
 <Location/>
 

@@ -68,14 +68,14 @@ console.log(blogs);
                 return(
                     <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' key={index}>
                     <div className="card p-0 overflow-hidden h-100 shadow align-items-center" >
-                    <img className="card-img-top" src={item.imgSRC} alt="Card image cap" style={{height: "167px", width: "167px", borderRadius: "50%",
+                    <img className="card-img-top" src={item.projectImg[0]} alt="Card image cap" style={{height: "167px", width: "167px", borderRadius: "50%",
                    display: "flex",
                    paddingTop: "8px"}}/>
                             <div className="card-body">
                                    <h5 className="card-title">{item.name}</h5>
                                     <p className="card-text"></p>
                                      <button class="btn btn-primary" style={{backgroundColor: "black", marginLeft: "4px"}}
-                                     onClick={()=>getData(item.imgSRC, item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
+                                     onClick={()=>getData(item.projectImg, item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
                                     </button>
                                      </div>
                                        </div>
