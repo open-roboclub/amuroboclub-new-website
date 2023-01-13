@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import Slider from "react-slick";
 import '../assets/ComponentDesign/Team.css';
 import BasicCard from "./TeamCard";
-
-
+import { db } from '../firebase';
+import { getDoc, doc,  collection} from "firebase/firestore"; 
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    
+
     <div
       className={className}
       style={{ ...style, display: "block", background: "red" }}
@@ -26,11 +26,61 @@ function SamplePrevArrow(props) {
       style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
     />
-   
+
   );
 }
 
 export default function Team() {
+
+
+
+
+  
+   const [blogs, setBlogs]= useState({});
+
+ 
+    const docRef = doc(db, "teams", "team_2022-23");
+   getDoc(docRef)
+   .then((doc)=>{
+    setBlogs(doc.data());
+   })
+   console.log(blogs)
+
+   function compare(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const rankA = a.rank;
+    const rankB = b.rank;
+  
+    let comparison = 0;
+    if (rankA > rankB) {
+      comparison = 1;
+    } else if (rankA < rankB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+  
+  // blogs.sort(compare);
+   
+console.log(blogs)
+
+
+  // useEffect(() => {
+  //   fetchBlogs();
+  //   }, [])
+  
+
+
+
+
+
+
+
+
+
+
+
+
   const slider = React.useRef(null);
 
   const settings = {
@@ -82,11 +132,11 @@ export default function Team() {
 
   return (
     <div className="team" id="team">
-       <div className="heading_main text_align_center" style={{paddingTop:"100px"}}>
+       <div className="heading_main text_align_center" style={{paddingTop:"100px", marginBottom: -70}}>
 						   <h2>Team</h2>
                         </div>
 
-      <div style={{ marginLeft: 150 }}>
+      <div style={{ marginLeft: 150 , marginBottom: -20, position:"relative"}}>
         <button onClick={() => slider?.current?.slickPrev()} type="button" className="btn btn-primary btn-floating btn-dark">
         <i class="fa-solid fa-arrow-left"></i>
         </button>
@@ -98,39 +148,12 @@ export default function Team() {
         </button>
       </div>
 
-      <Slider ref={slider} {...settings}>
-        {products?.map((item, index) => {
-          return <BasicCard item={item} />;
+      <Slider style={{marginTop: -20, position:"relative"}} ref={slider} {...settings}>
+        {blogs.members?.map((item, index) => {
+          return <BasicCard key={index} item={item} />;
         })}
       </Slider>
     </div>
   );
 }
 
-const products = [
-  {
-    id: 1,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-  {
-    id: 2,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-  {
-    id: 3,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-  {
-    id: 4,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-
-  {
-    id: 5,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-  {
-    id: 6,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-];

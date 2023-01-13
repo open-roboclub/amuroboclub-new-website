@@ -44,11 +44,12 @@
   }
   
   .aqua-gradient {
-    background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+    background: linear-gradient(40deg, rgb(41, 40, 40), rgb(35, 35, 35)) !important;
   }
   
   .testimonial-card .avatar {
     width: 120px;
+    height: 120px;
     margin-top: -60px;
     overflow: hidden;
     border: 5px solid #fff;

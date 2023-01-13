@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Footer from '../components/Footer';
 import './css/bootstrap.min.css';
 import './css/pogo-slider.min.css';
@@ -11,14 +11,14 @@ import Team from '../components/Team';
 import Achievements from '../components/Achievements';
 import Benefits from '../components/Benefits';
 import Location from '../components/Location';
-import Email from '../components/Email';
+
 import SimpleImageSlider from "react-simple-image-slider";
 import Modals from '../components/Modals';
 import Cards from '../components/Cards';
-
+import emailjs from '@emailjs/browser';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 // import PhotoGallery from '../components/PhotoGallery'
-import Carousel from 'react-bootstrap/Carousel';
+
 
 // import { grey, pink } from '@material-ui/core/colors';
 
@@ -34,6 +34,21 @@ const Home = () => {
         { url: "../assets/images/Alumniday.jpeg", title: "city" },
         { url: "../assets/images/NBAteam.jpeg", title: "italy" },
       ];
+
+
+      const form = useRef();
+
+      const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_oa8v4dk', 'template_rafm2to', form.current, 'LpfTSt9YjR7oLm7Am')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
+        };
    
   return (
     <>
@@ -106,7 +121,7 @@ const Home = () => {
                 </div>
 				<div className="col-md-6">
                     <div className="full" style={{paddingTop: "50px"}}>
-                        <img src={require("../assets/images/Team.jpeg")} alt="#" />
+                        <img style={{height:"375px"}} src={require("../assets/images/Team.jpeg")} alt="#" />
                     </div>
                 </div>
             </div>
@@ -115,24 +130,26 @@ const Home = () => {
     
 
 
+       {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+   Launch demo modal
+</button>
+
+<Modals /> */}
 
 
-
-
-
-    <div className="section margin-top_50" style={{paddingTop:"60px"}}>
+    <div className="section margin-top_50" style={{paddingTop:"0px"}}>
         <div className="container">
             <div className="row">
             <div className="col-md-6">
                     <div className="full" style={{paddingTop: "80px"}}>
-                        <img src={require("../assets/images/wallpaper.png")} alt="#" style={{height:"490px"}}/>
+                        <img src={require("../assets/images/wallpaper.png")} alt="#" style={{height:"350px"}}/>
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
                         <div className="heading_main text_align_right">
-						   <h2>Why Join Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						   <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why Join Us&nbsp;
+                           &nbsp;&nbsp;&nbsp;&nbsp;
                            &nbsp;&nbsp; </h2>
                         </div>
 						  <p>{content[0].whyjoin}</p>
@@ -143,9 +160,6 @@ const Home = () => {
             </div>
         </div>
     </div>
-
-
-
 
 
 
@@ -218,41 +232,41 @@ const Home = () => {
 
 
 
-
+ <form ref={form} onSubmit={sendEmail}>
     <div id='email'>
       <div className="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header text-center">
-        <h4 className="modal-title w-100 font-weight-bold">Write to us</h4>
+        <h4 className="modal-title w-100 font-weight-bold" style={{color: "black"}}>Write to us</h4>
         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div className="modal-body mx-3">
         <div className="md-form mb-5">
-          <i className="fas fa-user prefix grey-text"></i>
-          <input type="text" id="form34" className="form-control validate"/>
-          <label data-error="wrong" data-success="right" for="form34">Your name</label>
+          <i className="fas fa-user prefix grey-text"></i><label data-error="wrong" data-success="right" for="form34">&nbsp;&nbsp;&nbsp;Your name</label>
+          <input type="text" id="form34" className="form-control validate" name='name'/>
+          
         </div>
 
         <div className="md-form mb-5">
-          <i className="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="form29" className="form-control validate"/>
-          <label data-error="wrong" data-success="right" for="form29">Your email</label>
+          <i className="fas fa-envelope prefix grey-text"></i><label data-error="wrong" data-success="right" for="form29">&nbsp;&nbsp;&nbsp;Your email</label>
+          <input type="email" id="form29" className="form-control validate" name='email'/>
+          
         </div>
 
         <div className="md-form mb-5">
-          <i className="fas fa-tag prefix grey-text"></i>
-          <input type="text" id="form32" className="form-control validate"/>
-          <label data-error="wrong" data-success="right" for="form32">Subject</label>
+          <i className="fas fa-tag prefix grey-text"></i><label data-error="wrong" data-success="right" for="form32">&nbsp;&nbsp;&nbsp;Subject</label>
+          <input type="text" id="form32" className="form-control validate" name='subject'/>
+          
         </div>
 
         <div className="md-form">
-          <i className="fas fa-pencil prefix grey-text"></i>
-          <textarea type="text" id="form8" className="md-textarea form-control" rows="4"></textarea>
-          <label data-error="wrong" data-success="right" for="form8">Your message</label>
+          <i className="fas fa-pencil prefix grey-text"></i><label data-error="wrong" data-success="right" for="form8">&nbsp;&nbsp;&nbsp;Your message</label>
+          <textarea type="text" id="form8" name='message' className="md-textarea form-control" rows="4"></textarea>
+          
         </div>
 
       </div>
@@ -265,6 +279,12 @@ const Home = () => {
 
 
     </div>
+    </form>
+
+
+
+
+    
 
 
 
