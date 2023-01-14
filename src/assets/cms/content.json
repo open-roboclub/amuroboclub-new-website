@@ -49,6 +49,14 @@
                 "image": "../assets/images/NBAteam.jpeg",
                  "title": "Hello"
             }
+          ],
+          "aboutImages": [
+            {
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710872/2022-23_website_react/About/Team.jpg"
+            },
+            {
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673718220/2022-23_website_react/About/wallpaper.png"
+            }
           ]
     }
 ]

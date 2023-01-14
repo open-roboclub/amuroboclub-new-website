@@ -87,7 +87,7 @@ const Home = () => {
                        <AnchorLink href='#team'> <li><a href="#"><span>Team</span></a></li></AnchorLink>
 					   <li><a  type="button"  data-toggle="modal" data-target="#modalRegular"><span style={{color: "black"}}> Location</span></a></li>
 					   <li><a href="#" data-toggle="modal" data-target="#modalContactForm"><span class="icon"></span><span>Email</span></a></li>
-					   <li><a href="#"><span class="icon"></span><span>Newsletter</span></a></li>
+					   <li><a href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span class="icon"></span><span>Newsletter</span></a></li>
                        
                        
                        
@@ -121,7 +121,7 @@ const Home = () => {
                 </div>
 				<div className="col-md-6">
                     <div className="full" style={{paddingTop: "50px"}}>
-                        <img style={{height:"375px"}} src={require("../assets/images/Team.jpeg")} alt="#" />
+                        <img style={{height:"375px"}} src={content[0].aboutImages[0].image} alt="#" />
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@ const Home = () => {
             <div className="row">
             <div className="col-md-6">
                     <div className="full" style={{paddingTop: "80px"}}>
-                        <img src={require("../assets/images/wallpaper.png")} alt="#" style={{height:"350px"}}/>
+                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"350px"}}/>
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
