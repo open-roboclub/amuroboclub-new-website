@@ -1,5 +1,7 @@
 import React, {useRef} from 'react'
+import Particles, { ISourceOptions } from "react-tsparticles";
 import Footer from '../components/Footer';
+import ImageSlider from '../components/ImageSlider';
 import './css/bootstrap.min.css';
 import './css/pogo-slider.min.css';
 import './css/style.css';
@@ -7,12 +9,14 @@ import './css/custom.css';
 import './css/responsive.css';
 import './css/responsiveslides.css';
 import './css/custom.css';
+
+import Benefits from '../components/Benefits';
 import Team from '../components/Team';
 import Achievements from '../components/Achievements';
-import Benefits from '../components/Benefits';
-import Location from '../components/Location';
 
-import SimpleImageSlider from "react-simple-image-slider";
+import Location from '../components/Location';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 import Modals from '../components/Modals';
 import Cards from '../components/Cards';
 import emailjs from '@emailjs/browser';
@@ -27,13 +31,7 @@ import content from "../assets/cms/content.json"
 // import PhotoGallery from '../components/PhotoGallery';
 console.log(process.env.REACT_APP_apiKey);
 const Home = () => {
-    const images = [
-        { url: "../assets/images/NBAteam.jpeg", title: "beach" },
-        { url: "../assets/images/Alumniday.jpeg", title: "boat" },
-        { url: "../assets/images/Team.jpeg", title: "forest" },
-        { url: "../assets/images/Alumniday.jpeg", title: "city" },
-        { url: "../assets/images/NBAteam.jpeg", title: "italy" },
-      ];
+    
 
 
       const form = useRef();
@@ -103,10 +101,12 @@ const Home = () => {
 		  </div>
 	   </div>
 	</div>
+  
 
 
 
 	{/* <!-- section --> */} 
+  <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
     <div className="section margin-top_50">
         <div className="container">
             <div className="row">
@@ -127,16 +127,11 @@ const Home = () => {
             </div>
         </div>
     </div>
-    
+    </AnimationOnScroll>
 
+   
 
-       {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-   Launch demo modal
-</button>
-
-<Modals /> */}
-
-
+    <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce="true" offset={15}  duration="0.5">
     <div className="section margin-top_50" style={{paddingTop:"0px"}}>
         <div className="container">
             <div className="row">
@@ -161,63 +156,59 @@ const Home = () => {
         </div>
     </div>
 
+    </AnimationOnScroll>
 
 
 
 
 
-
-    <div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
-						   <h2>Photo Gallery</h2>
-                        </div>
-
-
-
-
-                        <div class="section layout_padding padding_bottom-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="full">
-                    <div style={{paddingLeft: "110px"}}>
-      <SimpleImageSlider
-        width={900}
-        height={600}
-        images={images}
-        showBullets={true}
-        showNavs={true}
-        navSize={80}
-        slideDuration={0.7}
-        autoPlay={true}
-        autoPlayDelay={2}
-      />
-    </div>
-					  </div>
-                </div>
-			  </div></div></div>
-                
    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-
-<Achievements/>
-
-
-
-<Benefits/>
-
-   
-    
-              <div className="heading_main text_align_center" style={{paddingTop:"135px", paddingBottom:"0px"}}>
+        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
+<Achievements/></AnimationOnScroll>
+<div className="heading_main text_align_center" style={{paddingTop:"135px", paddingBottom:"0px"}}>
 						   <h2>Featured Projects</h2>
                         </div>
 	
    
-   
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.8">
   <Cards/>
-
+</AnimationOnScroll>
   
+
+<AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
+<Benefits/>
+
+</AnimationOnScroll>
+    
+             
   <div class="section margin-top_50 silver_bg" id='benefits'>
         <div class="container">
             <div class="row">
@@ -234,7 +225,7 @@ const Home = () => {
 
  <form ref={form} onSubmit={sendEmail}>
     <div id='email'>
-      <div className="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      <div className="modal fade" id="modalContactForm" tabindex="-1" role="dialog" ariaLabelledby="myModalLabel"
   aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
@@ -286,18 +277,27 @@ const Home = () => {
 
     
 
-
+    <AnimationOnScroll animateIn="animate__bounceIn" animateOnce="true"  duration="1">
 
 <Team/>
-
+</AnimationOnScroll>
 <Location/>
 
 
 
 
+<div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
+						   <h2>Photo Gallery</h2>
+                        </div>
+
+
+                       
+                        <ImageSlider/>
+                    
 
     <div style={{marginTop:"70px"}}>
     <Footer /></div>
+    
              
     </>
   )

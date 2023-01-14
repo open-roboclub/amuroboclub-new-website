@@ -36,16 +36,17 @@ export default function Team() {
 
 
   
-   const [blogs, setBlogs]= useState({});
+   const [blogs, setBlogs]= useState([]);
 
  
     const docRef = doc(db, "teams", "team_2022-23");
    getDoc(docRef)
    .then((doc)=>{
-    setBlogs(doc.data());
+    setBlogs(doc.data().members)
+   
    })
-   console.log(blogs)
-
+  //  console.log(blogs)
+  
    function compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const rankA = a.rank;
@@ -60,9 +61,9 @@ export default function Team() {
     return comparison;
   }
   
-  // blogs.sort(compare);
+  blogs.sort(compare);
    
-console.log(blogs)
+// console.log(blogs)
 
 
   // useEffect(() => {
@@ -85,10 +86,10 @@ console.log(blogs)
 
   const settings = {
     infinite: true,
-    arrows: true,
+    arrows: false,
     speed: 900,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
 
@@ -132,27 +133,29 @@ console.log(blogs)
 
   return (
     <div className="team" id="team">
-       <div className="heading_main text_align_center" style={{paddingTop:"100px", marginBottom: -70}}>
-						   <h2>Team</h2>
+       <div className="heading_main text_align_center" style={{paddingTop:"0px", marginBottom: -10}}>
+						   <h2>Our Team</h2>
                         </div>
 
-      <div style={{ marginLeft: 150 , marginBottom: -20, position:"relative"}}>
-        <button onClick={() => slider?.current?.slickPrev()} type="button" className="btn btn-primary btn-floating btn-dark">
-        <i class="fa-solid fa-arrow-left"></i>
+                        <div class="container text-center">
+  <div class="text-center justify-content-center align-items-center">
+        <button onClick={() => slider?.current?.slickPrev()} type="button" style={{marginRight:"70px", borderRadius: "50%"}} className="btn btn-primary btn-floating btn-dark">
+        <i class="fa-solid fa-2x fa-arrow-left"></i>
         </button>
         <button
-          style={{ marginLeft: 1135 }}
+         style={{marginLeft:"70px", borderRadius: "50%"}}
           onClick={() => slider?.current?.slickNext()}
           type="button" className="btn btn-primary btn-floating btn-dark">
-          <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-2x fa-arrow-right"></i>
         </button>
-      </div>
+      </div></div>
 
       <Slider style={{marginTop: -20, position:"relative"}} ref={slider} {...settings}>
-        {blogs.members?.map((item, index) => {
+        {blogs?.map((item, index) => {
           return <BasicCard key={index} item={item} />;
         })}
       </Slider>
+      
     </div>
   );
 }

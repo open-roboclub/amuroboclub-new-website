@@ -20,7 +20,7 @@ const Cards = () => {
 
 const data= querySnapshot.docs.map((doc)=>({...doc.data(),}));
 setBlogs(data);
-console.log(blogs)
+// console.log(blogs)
 
 
 
@@ -53,7 +53,7 @@ console.log(blogs)
 
   return (
     <>
-      <section className='py-4 py-lg-5 container' >
+      <section className='py-4 py-lg-5 container'  >
            <div className='row justify-content-center align-item-center'>
             {blogs.filter(blog => featuredProjects.includes(blog.name) ).map((item, index)=>{
                 return(
@@ -63,10 +63,10 @@ console.log(blogs)
                    display: "flex",
                    paddingTop: "8px"}}/>
                             <div className="card-body">
-                                   <h5 className="card-title">{item.name}</h5>
+                                   <h5 className="card-title" style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>{item.name}</h5>
                                     <p className="card-text"></p>
-                                     <button class="btn btn-primary" data-toggle="modal"  data-target="#exampleModalLong" style={{backgroundColor: "black", marginLeft: "4px"}}
-                                     onClick={()=>getData(item.projectImg, item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
+                                     <button class="btn btn-primary btn-dark" data-toggle="modal"  data-target="#exampleModalLong" style={{ marginLeft: "4px"}}
+                                     onClick={()=>getData(item.projectImg[0], item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
                                     </button>
                                      </div>
                                        </div>
@@ -80,6 +80,8 @@ console.log(blogs)
       {
         model === true ? <Modals img={tempdata[1]} name={tempdata[2]} description={tempdata[3]} progress={tempdata[4]} teamMembers={tempdata[5]} date={tempdata[6]} hide={()=>setModel(false)}/>: ''
       }
+
+      
     </>
   )
 }
