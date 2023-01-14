@@ -24,22 +24,22 @@ const Header = ({active, setActive, user, handleLOgout}) => {
             </button>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0" id='navbarSupportedContent'>
-              <Link to="/" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
+              {/* <Link to="/" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "home" ? "active" : ""
-                    }`} onClick={() => setActive("home")}>Home</li></Link>
+                    }`} onClick={() => setActive("home")}>Home</li></Link> */}
               
-              <Link to="/blogs" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
+              {/* <Link to="/blogs" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "blogs" ? "active" : ""
-                    }`} onClick={() => setActive("blogs")}>Blogs</li></Link>
-              <Link to="/contact" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
+                    }`} onClick={() => setActive("blogs")}>Blogs</li></Link> */}
+              {/* <Link to="/contact" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "contact" ? "active" : ""
-                    }`} onClick={() => setActive("contact")}>Contribute<i style={{marginLeft:"5px"}} class="fa-solid fa-heart"></i></li></Link>
+                    }`} onClick={() => setActive("contact")}>Contribute<i style={{marginLeft:"5px"}} class="fa-solid fa-heart"></i></li></Link> */}
               {/* <Link to="/join-us" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
                       active === "join-us" ? "active" : ""
                     }`} onClick={() => setActive("join-us")}>Join</li></Link>       */}
               </ul>
             </div>
-            <div className="row g-3">
+            {/* <div className="row g-3">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {user?.uid ? (
                     <>
@@ -88,7 +88,7 @@ const Header = ({active, setActive, user, handleLOgout}) => {
                   )}
                   
               </ul>
-            </div>
+            </div> */}
         </nav>
       </div>
     </div>

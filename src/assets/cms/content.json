@@ -1,32 +1,55 @@
 [
     {
         "about": "AMURoboclub is a student’s body which caters to the need of electronics enthusiasts and hobbyists in creating an environment which is driven by innovation and implementation. Run under the able guidance and supervision of faculty advisors from various branches of engineering, AMU Roboclub stands as an epitome of marvel. It not only acts as a platform for zealous students to hone their skills in the field of Electrical, Electronics, Computers and Mechanical but also prepares them for various national competitions by encouraging participation.",
+        "whyjoin": "AMURoboclub serves as a framework to stimulate interest and showcase your talent in almost all the interdisciplinary aspects of robotics and engineering byengaging students in profound activities, competitions, projects and workshops throughout the year. Furthermore, the club guides and encourages the students to participate in various national and international competitions.With no barrier of branch and year of graduation, the AMURoboclub family works best with experienced seniors and fresh innovators.The teachings and the working environment of AMURoboclub train its members in such a manner that they do wonders in their career. ",
         "achievements": [
             {
-                "text": "Got sponsored by companies like MathWorks, Cognizant, etc... for ABU Robocon, 2019.",
-                "image": "../assets/images/mathworks.jpg"
+                "text": "Got sponsored by MathWorks",
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710558/2022-23_website_react/About/mathworks.png"
             },
             {
                 "text": "Participated in robocon 2018",
-                "image": "../assets/images/robocon2018.jpg"
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710526/2022-23_website_react/About/robocon2018.png"
             },
             {
-                "text": "FIRST PRIZE in SMART INDIA HACKATHON 2019",
-                "image": "../assets/images/smartindiahackathon.png"
+                "text": "AIR 1 in Smart India Hac 19",
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710482/2022-23_website_react/About/smartindiahackathon.png"
             },
             {
-                "text": "Got placed first in Technoxian in 2018",
-                "image": "../assets/images/technoxian.jpg"
+                "text": "First rank in Technoxian in 2018",
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710474/2022-23_website_react/About/technoxian.jpg"
             },
             {
-                "text": "Participated in robocon 2020",
-                "image": "../assets/images/robocon2020.jpg"
+                "text": "AIR rank 22 in robocon 2020",
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710498/2022-23_website_react/About/robocon2020.jpg"
             },
             {
-                "text": "AIR 3 in TECHNICHE' , IIT-GUWAHATI",
-                "image": "../assets/images/techniche.jpg"
+                "text": "AIR 3 in TECHNICHE',IIT-GUWAHATI",
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710462/2022-23_website_react/About/techniche.jpg"
             }
-        ]
+        ],
+        "galleryImages": [
+            { 
+                "image": "../assets/images/NBAteam.jpeg",
+                "title": "Hello"
+             },
+            { 
+                "image": "../assets/images/Alumniday.jpeg",
+                 "title": "Hello"
+            },
+            { 
+                "image": "../assets/images/Team.jpeg",
+                "title": "Hello"
+            },
+            {
+                 "image": "../assets/images/Alumniday.jpeg",
+                "title": "Hello"
+                },
+            { 
+                "image": "../assets/images/NBAteam.jpeg",
+                 "title": "Hello"
+            }
+          ]
     }
 ]
 

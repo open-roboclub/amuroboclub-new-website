@@ -15,14 +15,14 @@ const Achievements = () => {
 
 
          
-         <div  className="row">
+         <div  className="row text-center">
             {content[0].achievements.map((object, index) => (
          
          <div className="col-md-4 col-sm-6">
             <div key={index}id="ho_color" class="service_box">
-               {/* <img src={object.image} style={{marginLeft:"15px", height: "140px", width: "140px"}}  alt="#" height={85} width={125} /> */}
-               {/* <h3 style={{marginLeft:"15px"}}>{object.text}</h3> */}
-               <p style={{marginLeft:"15px"}}>{object.text}</p>
+               <img src={object.image} style={{marginLeft:"0px", height: "140px", width: "240px"}}  alt="#" height={85} width={125} /> 
+                <h3 style={{marginLeft:"0px", marginTop:"20px"}}>{object.text}</h3> 
+               {/* <p style={{marginLeft:"15px"}}>{object.text}</p> */}
             </div>
          </div>
          
