@@ -53,6 +53,20 @@ setBlogs(data);
 
   return (
     <>
+       <div className=''>
+       <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+    </ul>
       <section className='py-4 py-lg-5 container'  >
            <div className='row justify-content-center align-item-center'>
             {blogs.filter(blog => featuredProjects.includes(blog.name) ).map((item, index)=>{
@@ -81,7 +95,7 @@ setBlogs(data);
         model === true ? <Modals img={tempdata[1]} name={tempdata[2]} description={tempdata[3]} progress={tempdata[4]} teamMembers={tempdata[5]} date={tempdata[6]} hide={()=>setModel(false)}/>: ''
       }
 
-      
+      </div>
     </>
   )
 }

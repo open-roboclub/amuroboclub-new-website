@@ -30,7 +30,7 @@ import Cards from '../components/Cards';
 import emailjs from '@emailjs/browser';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 // import PhotoGallery from '../components/PhotoGallery'
-
+import Introduction from '../components/Introduction';
 
 // import { grey, pink } from '@material-ui/core/colors';
 
@@ -73,7 +73,7 @@ const Home = () => {
         };
    
   return (
-    <div class="area">
+    <div className='area'>
 
 {/* <ParticleBackground settings={settings} /> */}
 <section className="banner_main">
@@ -97,30 +97,10 @@ const Home = () => {
       </div>
    </section>   
 
-<div >
-    <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-    </ul>
-</div >
+
+  
+
+
 
    <div class="section tabbar_menu">
 	   <div class="container">
@@ -154,26 +134,7 @@ const Home = () => {
 
 	{/* <!-- section --> */} 
   <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
-    <div className="section margin-top_50">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6 layout_padding_2">
-                    <div className="full">
-                        <div className="heading_main text_align">
-						   <h2 style={{color:"#E5E4E2"}}>&nbsp;&nbsp;&nbsp;&nbsp;What is AMURoboclub &nbsp;&nbsp;&nbsp;</h2>
-                        </div>
-						  <p style={{color:"#E5E4E2", textAlign: "justify"}}>{content[0].about}</p>
-						
-                    </div>
-                </div>
-				<div className="col-md-6">
-                    <div className="full" style={{paddingTop: "50px"}}>
-                        <img style={{height:"375px", borderRadius:"40px"}} src={content[0].aboutImages[0].image} alt="#" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <Introduction/>
     </AnimationOnScroll>
 
    
@@ -184,15 +145,14 @@ const Home = () => {
             <div className="row">
             <div className="col-md-6">
                     <div className="full" style={{paddingTop: "80px"}}>
-                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"350px", borderRadius:"40px"}}/>
+                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"400px", borderRadius:"40px"}}/>
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
-                        <div className="heading_main text_align_right">
-						   <h2 style={{color:"#E5E4E2"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why Join Us&nbsp;
-                           &nbsp;&nbsp;&nbsp;&nbsp;
-                           &nbsp;&nbsp; </h2>
+                        <div className="heading_main text_align_center">
+						   <h2 style={{color:"#E5E4E2"}}>Why Join US
+                          </h2>
                         </div>
 						  <p style={{color:"#E5E4E2", textAlign: "justify"}} >{content[0].whyjoin}</p>
 						
@@ -250,10 +210,10 @@ const Home = () => {
 </AnimationOnScroll>
   
 
-<AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
+
 <Benefits/>
 
-</AnimationOnScroll>
+
     
              
   <div class="section margin-top_50 silver_bg" id='benefits'>

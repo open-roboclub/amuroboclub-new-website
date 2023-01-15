@@ -3,6 +3,20 @@ import content from "../assets/cms/content.json"
 
 const Achievements = () => {
   return (
+   <div >
+       <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+    </ul>
     <div id='achievements'>
     <div id="service" class="service">
       <div class="container">
@@ -33,7 +47,7 @@ const Achievements = () => {
       </div>
    </div>
    </div>
-
+</div>
   )
 }
 
