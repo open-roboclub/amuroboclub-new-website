@@ -9,10 +9,18 @@ import './css/custom.css';
 import './css/responsive.css';
 import './css/responsiveslides.css';
 import './css/custom.css';
-
+import Test from '../components/Test';
 import Benefits from '../components/Benefits';
 import Team from '../components/Team';
 import Achievements from '../components/Achievements';
+import '../assets/ComponentDesign/square.css';
+
+import ParticleBackground from 'react-particle-backgrounds'
+
+
+
+
+
 
 import Location from '../components/Location';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -33,6 +41,22 @@ console.log(process.env.REACT_APP_apiKey);
 const Home = () => {
     
 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       const form = useRef();
 
@@ -49,9 +73,9 @@ const Home = () => {
         };
    
   return (
-    <>
+    <div class="area">
 
-
+{/* <ParticleBackground settings={settings} /> */}
 <section className="banner_main">
       <div className="container">
          <div className="row">
@@ -71,9 +95,32 @@ const Home = () => {
             </div>
          </div>
       </div>
-   </section>
+   </section>   
 
-
+<div >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
 
    <div class="section tabbar_menu">
 	   <div class="container">
@@ -112,16 +159,16 @@ const Home = () => {
             <div className="row">
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
-                        <div className="heading_main text_align_left">
-						   <h2>What is AMURoboclub &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <div className="heading_main text_align">
+						   <h2 style={{color:"#E5E4E2"}}>&nbsp;&nbsp;&nbsp;&nbsp;What is AMURoboclub &nbsp;&nbsp;&nbsp;</h2>
                         </div>
-						  <p>{content[0].about}</p>
+						  <p style={{color:"#E5E4E2", textAlign: "justify"}}>{content[0].about}</p>
 						
                     </div>
                 </div>
 				<div className="col-md-6">
                     <div className="full" style={{paddingTop: "50px"}}>
-                        <img style={{height:"375px"}} src={content[0].aboutImages[0].image} alt="#" />
+                        <img style={{height:"375px", borderRadius:"40px"}} src={content[0].aboutImages[0].image} alt="#" />
                     </div>
                 </div>
             </div>
@@ -137,17 +184,17 @@ const Home = () => {
             <div className="row">
             <div className="col-md-6">
                     <div className="full" style={{paddingTop: "80px"}}>
-                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"350px"}}/>
+                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"350px", borderRadius:"40px"}}/>
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
                         <div className="heading_main text_align_right">
-						   <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why Join Us&nbsp;
+						   <h2 style={{color:"#E5E4E2"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why Join Us&nbsp;
                            &nbsp;&nbsp;&nbsp;&nbsp;
                            &nbsp;&nbsp; </h2>
                         </div>
-						  <p>{content[0].whyjoin}</p>
+						  <p style={{color:"#E5E4E2", textAlign: "justify"}} >{content[0].whyjoin}</p>
 						
                     </div>
                 </div>
@@ -194,7 +241,7 @@ const Home = () => {
         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
 <Achievements/></AnimationOnScroll>
 <div className="heading_main text_align_center" style={{paddingTop:"135px", paddingBottom:"0px"}}>
-						   <h2>Featured Projects</h2>
+						   <h2 style={{color:"#E5E4E2"}}>Featured Projects</h2>
                         </div>
 	
    
@@ -287,7 +334,7 @@ const Home = () => {
 
 
 <div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
-						   <h2>Photo Gallery</h2>
+						   <h2 style={{color:"#E5E4E2"}}>Photo Gallery</h2>
                         </div>
 
 
@@ -299,7 +346,7 @@ const Home = () => {
     <Footer /></div>
     
              
-    </>
+    </div>
   )
 }
 

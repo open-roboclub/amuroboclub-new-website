@@ -14,7 +14,7 @@ const TeamCard = ({ item }) => {
   return (
     
      <div class="container">
-  <section class="mx-auto my-5" style={{maxWidth: "27rem"}}>
+  <section class="mx-auto my-5">
       
     <div class="card testimonial-card mt-2 mb-3">
       <div class="card-up aqua-gradient"></div>
@@ -27,8 +27,7 @@ const TeamCard = ({ item }) => {
         <hr/>
         <p style={{fontWeight:"bold"}}>{item.position}</p>
         <div class="media-icons">
-             <a href={item.email}><i class="fa-solid fa-2x fa-envelope "></i></a>
-             
+             <a href={"mailto:"+item.email} ><i class="fa-solid fa-2x fa-envelope "></i></a>
            </div>
       </div>
     </div>

@@ -134,23 +134,22 @@ export default function Team() {
   return (
     <div className="team" id="team">
        <div className="heading_main text_align_center" style={{paddingTop:"20px", marginBottom: -10}}>
-						   <h2>Our Team</h2>
+						   <h2 style={{color:"#E5E4E2"}}>Our Team</h2>
                         </div>
 
-                        <div class="container text-center">
-  <div class="text-center justify-content-center align-items-center">
-        <button onClick={() => slider?.current?.slickPrev()} type="button" style={{marginRight:"70px", borderRadius: "50%"}} className="btn btn-primary btn-floating btn-dark">
+                        <div class="container text_align_center"> 
+        <button onClick={() => slider?.current?.slickPrev()} type="button" style={{marginRight:"15px", borderRadius: "50%"}} className="btn btn-primary btn-floating btn-dark">
         <i class="fa-solid fa-2x fa-arrow-left"></i>
         </button>
         <button
-         style={{marginLeft:"70px", borderRadius: "50%"}}
+         style={{marginLeft:"15px", borderRadius: "50%"}}
           onClick={() => slider?.current?.slickNext()}
           type="button" className="btn btn-primary btn-floating btn-dark">
           <i class="fa-solid fa-2x fa-arrow-right"></i>
         </button>
-      </div></div>
+      </div>
 
-      <Slider style={{marginTop: -20, position:"relative"}} ref={slider} {...settings}>
+      <Slider  ref={slider} {...settings}>
         {blogs?.map((item, index) => {
           return <BasicCard key={index} item={item} />;
         })}
