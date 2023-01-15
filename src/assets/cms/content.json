@@ -30,24 +30,24 @@
         ],
         "galleryImages": [
             { 
-                "image": "../assets/images/NBAteam.jpeg",
-                "title": "Hello"
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673819424/2022-23_website_react/About/WhatsApp_Image_2023-01-16_at_3.14.05_AM.jpg",
+                "title": ""
              },
             { 
-                "image": "../assets/images/Alumniday.jpeg",
-                 "title": "Hello"
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673710872/2022-23_website_react/About/Team.jpg",
+                 "title": ""
             },
             { 
-                "image": "../assets/images/Team.jpeg",
-                "title": "Hello"
+                "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673819421/2022-23_website_react/About/WhatsApp_Image_2023-01-16_at_3.14.57_AM.jpg",
+                "title": ""
             },
             {
-                 "image": "../assets/images/Alumniday.jpeg",
-                "title": "Hello"
+                 "image": "https://res.cloudinary.com/amuroboclub/image/upload/v1673819419/2022-23_website_react/About/WhatsApp_Image_2023-01-16_at_3.16.09_AM.jpg",
+                "title": ""
                 },
             { 
                 "image": "../assets/images/NBAteam.jpeg",
-                 "title": "Hello"
+                 "title": ""
             }
           ],
           "aboutImages": [
