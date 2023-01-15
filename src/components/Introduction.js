@@ -1,23 +1,24 @@
 import React from 'react'
 import content from "../assets/cms/content.json"
-
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 const Introduction = () => {
   return (
     <div>
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            
-    </ul>
+    <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
     
+</ul>
+   
+    <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
     <div className="section margin-top_50">
         <div className="container">
             <div className="row">
@@ -38,6 +39,7 @@ const Introduction = () => {
             </div>
         </div>
     </div>
+    </AnimationOnScroll>
     </div>
   )
 }

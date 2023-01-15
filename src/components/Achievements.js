@@ -4,7 +4,7 @@ import content from "../assets/cms/content.json"
 const Achievements = () => {
   return (
    <div >
-       <ul class="circles">
+   <ul class="circles">
             <li></li>
             <li></li>
             <li></li>

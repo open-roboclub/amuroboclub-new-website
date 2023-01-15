@@ -12,7 +12,7 @@ const Location = () => {
 
 {/* <!--Modal: Name--> */}
 <div className="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+  aria-hidden="true" dataBackdrop="false">
   <div className="modal-dialog modal-lg" role="document">
 
     {/* <!--Content--> */}

@@ -1,21 +1,22 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import Particles, { ISourceOptions } from "react-tsparticles";
 import Footer from '../components/Footer';
 import ImageSlider from '../components/ImageSlider';
-import './css/bootstrap.min.css';
-import './css/pogo-slider.min.css';
+// import './css/bootstrap.min.css';
+// import './css/pogo-slider.min.css';
 import './css/style.css';
-import './css/custom.css';
-import './css/responsive.css';
-import './css/responsiveslides.css';
+// import './css/custom.css';
+// import './css/responsive.css';
+// import './css/responsiveslides.css';
 import './css/custom.css';
 import Test from '../components/Test';
 import Benefits from '../components/Benefits';
 import Team from '../components/Team';
 import Achievements from '../components/Achievements';
-import '../assets/ComponentDesign/square.css';
 
-import ParticleBackground from 'react-particle-backgrounds'
+import '../assets/ComponentDesign/Navbar.css';
+
+// import ParticleBackground from 'react-particle-backgrounds'
 
 
 
@@ -42,7 +43,13 @@ const Home = () => {
     
 
  
-
+  const myStyle={
+    backgroundImage: 
+"url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
+opacity: 0.99,
+    // backgroundSize: 'cover',
+    backgroundRepeat: 'repeat',
+};
 
 
 
@@ -71,12 +78,93 @@ const Home = () => {
           });
           e.target.reset();
         };
-   
+
+
+
+
+
+
+
+
+    
   return (
-    <div className='area'>
+
+<div style={myStyle}>
+
+<nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
+
+ 
+  <a class="navbar-brand" href="#"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px"}} alt="image" /></a>
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+ 
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    
+    <ul class="navbar-nav mr-auto" >
+      <li class="nav-item active" style={{fontSize:"20px"}}>
+        <a class="nav-link" href="#"><AnchorLink href='#achievements' style={{color:"white"}}>Achievements<i class="fa-solid fa-1x fa-trophy" style={{marginLeft:"4px"}}></i></AnchorLink>
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item" style={{fontSize:"20px"}}>
+        <a class="nav-link active" href="#"><AnchorLink href='#benefits' style={{color:"white"}}>Benefits<i class="fa-solid fa-shield-halved" style={{marginLeft:"4px"}}></i></AnchorLink></a>
+      </li>
+      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+        <a class="nav-link" href="#"><AnchorLink href='#team' style={{color:"white"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
+      </li>
+      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+        <a class="nav-link" href="#">Events<i class="fa-solid fa-calendar-days" style={{marginLeft:"4px"}}></i></a>
+      </li>
+      <li class="nav-item active"style={{fontSize:"20px", color:"white",}}>
+        <a class="nav-link" href="#"  style={{zIndex: -1}} data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
+      </li>
+      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+        <a class="nav-link" href="#" data-toggle="modal" data-backdrop="false" data-target="#modalContactForm">Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></a>
+      </li>
+      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+        <a class="nav-link" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing">Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></a>
+      </li>
+
+
+     
+      {/* <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> */}
+
+    </ul>
+  
+
+    {/* <form class="form-inline">
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
+      </div>
+    </form> */}
+  </div>
+ 
+
+</nav>
+
+
+   
+
+
+
+
 
 {/* <ParticleBackground settings={settings} /> */}
-<section className="banner_main">
+{/* <section className="banner_main">
       <div className="container">
          <div className="row">
             <div className="col-md-7 col-lg-7">
@@ -95,14 +183,14 @@ const Home = () => {
             </div>
          </div>
       </div>
-   </section>   
+   </section>    */}
 
 
   
 
 
-
-   <div class="section tabbar_menu">
+{/* 
+    <div class="section tabbar_menu">
 	   <div class="container">
 	      <div class="row">
 		      <div class="col-md-12">
@@ -112,7 +200,7 @@ const Home = () => {
                        <AnchorLink href='#benefits'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"24px"}}>Benefits</span></a></li></AnchorLink>
 					   <li><a href="#"><span class="icon"></span><span style={{marginLeft:"16px"}}>Events</span></a></li>
                        <AnchorLink href='#team'> <li><a href="#"><span>Team</span></a></li></AnchorLink>
-					   <li><a  type="button"  data-toggle="modal" data-target="#modalRegular"><span style={{color: "black"}}> Location</span></a></li>
+					   <li><a href='#' type="button"  data-toggle="modal" data-target="#modalRegular"><span style={{color: "black"}}> Location</span></a></li>
 					   <li><a href="#" data-toggle="modal" data-target="#modalContactForm"><span class="icon"></span><span>Email</span></a></li>
 					   <li><a href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span class="icon"></span><span>Newsletter</span></a></li>
                        
@@ -127,15 +215,15 @@ const Home = () => {
 			  </div>
 		  </div>
 	   </div>
-	</div>
-  
+	</div> */}
+   
 
 
 
 	{/* <!-- section --> */} 
-  <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
+
     <Introduction/>
-    </AnimationOnScroll>
+    
 
    
 
@@ -306,6 +394,7 @@ const Home = () => {
     <Footer /></div>
     
              
+    
     </div>
   )
 }

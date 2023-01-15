@@ -43,16 +43,17 @@ const App = () => {
 
   return (
     <div>
-      <Header setActive={setActive} active={active} user={user} handleLogout={handleLogout}/>
-      <ToastContainer position='top-center' />
-    <Routes>
+      <Home/>
+      {/* <Header setActive={setActive} active={active} user={user} handleLogout={handleLogout}/>
+      <ToastContainer position='top-center' /> */}
+    {/* <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Auth setActive={setActive}  />} />
       <Route path="*" element={<NotFound />} />
-    </Routes>
+    </Routes> */}
     </div>
   )
 }

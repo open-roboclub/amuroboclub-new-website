@@ -54,19 +54,7 @@ setBlogs(data);
   return (
     <>
        <div className=''>
-       <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            
-    </ul>
+      
       <section className='py-4 py-lg-5 container'  >
            <div className='row justify-content-center align-item-center'>
             {blogs.filter(blog => featuredProjects.includes(blog.name) ).map((item, index)=>{
@@ -79,7 +67,7 @@ setBlogs(data);
                             <div className="card-body">
                                    <h5 className="card-title" style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>{item.name}</h5>
                                     <p className="card-text"></p>
-                                     <button class="btn btn-primary btn-dark" data-toggle="modal"  data-target="#exampleModalLong" style={{ marginLeft: "4px"}}
+                                     <button class="btn btn-primary btn-dark" data-backdrop="false" data-toggle="modal"  data-target="#exampleModalLong" style={{ marginLeft: "4px"}}
                                      onClick={()=>getData(item.projectImg[0], item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
                                     </button>
                                      </div>

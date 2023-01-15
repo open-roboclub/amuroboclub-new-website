@@ -132,6 +132,21 @@ export default function Team() {
   };
 
   return (
+    <div>
+      <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+    </ul>
+    
     <div className="team" id="team">
        <div className="heading_main text_align_center" style={{paddingTop:"20px", marginBottom: -10}}>
 						   <h2 style={{color:"#E5E4E2"}}>Our Team</h2>
@@ -155,6 +170,7 @@ export default function Team() {
         })}
       </Slider>
       
+    </div>
     </div>
   );
 }
