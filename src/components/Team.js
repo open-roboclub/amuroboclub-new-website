@@ -133,7 +133,7 @@ export default function Team() {
 
   return (
     <div className="team" id="team">
-       <div className="heading_main text_align_center" style={{paddingTop:"0px", marginBottom: -10}}>
+       <div className="heading_main text_align_center" style={{paddingTop:"20px", marginBottom: -10}}>
 						   <h2>Our Team</h2>
                         </div>
 
