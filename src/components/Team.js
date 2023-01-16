@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import '../assets/ComponentDesign/Team.css';
 import BasicCard from "./TeamCard";
 import { db } from '../firebase';
-import { getDoc, doc,  collection} from "firebase/firestore"; 
+import { getDoc, doc,getDocs,  collection} from "firebase/firestore"; 
+import { BookSharp } from "@mui/icons-material";
 
 const SampleNextArrow=(props) =>{
   const { className, style, onClick } = props;
@@ -34,21 +35,41 @@ const SamplePrevArrow=(props)=> {
 
   const Team = () => {
 
+    const [team, setTeam]= useState([]);
+
+const docRef = doc(db, 'teams', 'team_2022-23')
+
+// getDoc(docRef).then((doc)=>{
+//   // console.log(doc.data().members)
+//   let allData= [];
+// doc.data().members.map((item)=>{
+//    allData.push(item);
+// })
+// console.log(allData)
+
+// })
+
+
+
+useEffect(()=>{
+  const fetchTeam= async ()=>{
+    const docSnap= await getDoc(docRef);
+    if (docSnap.exists()){
+      const allData= {
+        ...docSnap.data(),
+      }
+      console.log(allData)
+      setTeam(allData.members);
+      console.log(team)
+    }
+  };
+  fetchTeam();
+}, []);
+
 
   
-   const [blogs, setBlogs]= useState([]);
 
- 
-    const docRef = doc(db, "teams", "team_2022-23");
-   getDoc(docRef)
-   .then((doc)=>{
-    setBlogs(doc.data().members)
-  
-   })
-  //  console.log(blogs)
-  console.log("hello")
    function compare(a, b) {
-    // Use toUpperCase() to ignore character casing
     const rankA = a.rank;
     const rankB = b.rank;
   
@@ -61,18 +82,12 @@ const SamplePrevArrow=(props)=> {
     return comparison;
   }
   
-  blogs.sort(compare);
-   
-// console.log(blogs)
+  
+team.sort(compare)
 
-
-  //  useEffect(() => {
-  //    getDoc();
-  //  }, [])
   
 
-
-
+  console.log(team)
 
 
 
@@ -152,7 +167,7 @@ const SamplePrevArrow=(props)=> {
 						   <h2 style={{color:"#E5E4E2"}}>Our Team</h2>
                         </div>
 
-                        <div class="container text_align_center"> 
+                        <div class="container "> 
         <button onClick={() => slider?.current?.slickPrev()} type="button" style={{marginRight:"15px", borderRadius: "50%"}} className="btn btn-primary btn-floating btn-dark">
         <i class="fa-solid fa-2x fa-arrow-left"></i>
         </button>
@@ -165,7 +180,7 @@ const SamplePrevArrow=(props)=> {
       </div>
 
       <Slider  ref={slider} {...settings}>
-        {blogs?.map((item, index) => {
+        {team?.map((item, index) => {
           return <BasicCard key={index} item={item} />;
         })}
       </Slider>

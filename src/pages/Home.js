@@ -38,7 +38,6 @@ import Introduction from '../components/Introduction';
 // import { grey, pink, red } from '@material-ui/core/colors';
 import content from "../assets/cms/content.json"
 // import PhotoGallery from '../components/PhotoGallery';
-console.log(process.env.REACT_APP_apiKey);
 const Home = () => {
     
 
@@ -46,7 +45,7 @@ const Home = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.99,
+opacity: 0.98,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };
@@ -107,27 +106,27 @@ opacity: 0.99,
 
     
     <ul class="navbar-nav mr-auto" >
-      <li class="nav-item active" style={{fontSize:"20px"}}>
+      <li class="nav-item active" style={{fontSize:"18px"}}>
         <a class="nav-link" href="#"><AnchorLink href='#achievements' style={{color:"white"}}>Achievements<i class="fa-solid fa-1x fa-trophy" style={{marginLeft:"4px"}}></i></AnchorLink>
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item" style={{fontSize:"20px"}}>
+      <li class="nav-item" style={{fontSize:"18px"}}>
         <a class="nav-link active" href="#"><AnchorLink href='#benefits' style={{color:"white"}}>Benefits<i class="fa-solid fa-shield-halved" style={{marginLeft:"4px"}}></i></AnchorLink></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
         <a class="nav-link" href="#"><AnchorLink href='#team' style={{color:"white"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
         <a class="nav-link" href="#">Events<i class="fa-solid fa-calendar-days" style={{marginLeft:"4px"}}></i></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"20px", color:"white",}}>
+      <li class="nav-item active"style={{fontSize:"18px", color:"white",}}>
         <a class="nav-link" href="#"  style={{zIndex: -1}} data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
         <a class="nav-link" href="#" data-toggle="modal" data-backdrop="false" data-target="#modalContactForm">Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"20px", color:"white"}}>
+      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
         <a class="nav-link" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing">Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></a>
       </li>
 
@@ -374,7 +373,7 @@ opacity: 0.99,
 
     <AnimationOnScroll animateIn="animate__bounceIn" animateOnce="true"  duration="1">
 
-{/* <Team/> */}
+<Team/>
 </AnimationOnScroll>
 <Location/>
 
