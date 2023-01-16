@@ -5,7 +5,7 @@ import BasicCard from "./TeamCard";
 import { db } from '../firebase';
 import { getDoc, doc,  collection} from "firebase/firestore"; 
 
-function SampleNextArrow(props) {
+const SampleNextArrow=(props) =>{
   const { className, style, onClick } = props;
   return (
 
@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
+const SamplePrevArrow=(props)=> {
   const { className, style, onClick } = props;
   return (
     <div
@@ -30,9 +30,9 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function Team() {
 
 
+  const Team = () => {
 
 
   
@@ -43,10 +43,10 @@ export default function Team() {
    getDoc(docRef)
    .then((doc)=>{
     setBlogs(doc.data().members)
-   
+  
    })
   //  console.log(blogs)
-  
+  console.log("hello")
    function compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const rankA = a.rank;
@@ -66,9 +66,9 @@ export default function Team() {
 // console.log(blogs)
 
 
-  // useEffect(() => {
-  //   fetchBlogs();
-  //   }, [])
+  //  useEffect(() => {
+  //    getDoc();
+  //  }, [])
   
 
 
@@ -175,3 +175,4 @@ export default function Team() {
   );
 }
 
+export default  Team;

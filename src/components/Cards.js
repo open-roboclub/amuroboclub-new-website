@@ -20,7 +20,7 @@ const Cards = () => {
 
 const data= querySnapshot.docs.map((doc)=>({...doc.data(),}));
 setBlogs(data);
-// console.log(blogs)
+console.log(blogs)
 
 
 
