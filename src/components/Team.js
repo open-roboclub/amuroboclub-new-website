@@ -167,7 +167,7 @@ team.sort(compare)
 						   <h2 style={{color:"#E5E4E2"}}>Our Team</h2>
                         </div>
 
-                        <div class="container "> 
+                        <div class="container text_align_center"> 
         <button onClick={() => slider?.current?.slickPrev()} type="button" style={{marginRight:"15px", borderRadius: "50%"}} className="btn btn-primary btn-floating btn-dark">
         <i class="fa-solid fa-2x fa-arrow-left"></i>
         </button>
@@ -183,6 +183,7 @@ team.sort(compare)
         {team?.map((item, index) => {
           return <BasicCard key={index} item={item} />;
         })}
+        
       </Slider>
       
     </div>

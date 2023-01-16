@@ -24,13 +24,13 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="heading_main text_align_center" >
-                    <h3 style={{color: "white", fontSize: "30px"}}><i class="fa-regular fa-copyright"></i> AMU Roboclub 2022-23</h3>
+                    <h3 style={{color: "white", fontSize: "20px"}}><i class="fa-regular fa-copyright"></i> AMURoboclub 2022-23</h3>
                         </div>
                        
                     
                     <div className="col item social"><a href="#"><i className="icon ion-social-facebook"></i></a><a href="#"><i className="icon ion-social-twitter"></i></a><a href="#"><i className="icon ion-social-snapchat"></i></a><a href="#"><i className="icon ion-social-instagram"></i></a></div>
                 </div>
-                <p className="copyright" style={{color:"white", fontSize:"20px"}}>Developed by: Imad Bin Asad<a href="https://github.com/imad10902"><i className="icon ion-social-github" style={{color: "white", size:"30px", marginLeft:"5px"}}></i></a></p>
+                <p className="copyright" style={{color:"white", fontSize:"15px"}}>Developed by: Imad Bin Asad<a href="https://github.com/imad10902"><i className="icon ion-social-github" style={{color: "white", size:"30px", marginLeft:"5px"}}></i></a></p>
             </div>
         </footer>
     </div>
