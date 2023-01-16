@@ -374,7 +374,7 @@ opacity: 0.99,
 
     <AnimationOnScroll animateIn="animate__bounceIn" animateOnce="true"  duration="1">
 
-<Team/>
+{/* <Team/> */}
 </AnimationOnScroll>
 <Location/>
 
