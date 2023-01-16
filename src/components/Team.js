@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import '../assets/ComponentDesign/Team.css';
 import BasicCard from "./TeamCard";
 import { db } from '../firebase';
-import { getDoc, doc,  collection} from "firebase/firestore"; 
+import { getDoc, doc,getDocs,  collection} from "firebase/firestore"; 
 
 const SampleNextArrow=(props) =>{
   const { className, style, onClick } = props;
@@ -34,21 +34,48 @@ const SamplePrevArrow=(props)=> {
 
   const Team = () => {
 
-
+    const [blogs,setBlogs]=useState([])
+    const [year, setYear]= useState({})
+    const [team, setTeam]= useState([]);
+    const fetchBlogs=async()=>{
+      const querySnapshot = await getDocs(collection(db, "teams"))
+      
+     
+      //doc is document of collection and doc.data() is object in that doc. In book, all objects have been passed with index 0,1..
+  // querySnapshot is an is an array object of docs.
   
-   const [blogs, setBlogs]= useState([]);
-
+  const data= querySnapshot.docs.map((doc)=>({...doc.data(),}));
+  setBlogs(data);
+  
+  
+  console.log(blogs);
+  setYear(blogs[7])
+  console.log(year);
  
-    const docRef = doc(db, "teams", "team_2022-23");
-   getDoc(docRef)
-   .then((doc)=>{
-    setBlogs(doc.data().members)
+  setTeam(year.members);
+  console.log(team);
+    }
+    useEffect(() => {
+      fetchBlogs();
+      }, [])
   
-   })
-  //  console.log(blogs)
-  console.log("hello")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
    function compare(a, b) {
-    // Use toUpperCase() to ignore character casing
     const rankA = a.rank;
     const rankB = b.rank;
   
@@ -61,18 +88,15 @@ const SamplePrevArrow=(props)=> {
     return comparison;
   }
   
-  blogs.sort(compare);
-   
-// console.log(blogs)
-
-
-  //  useEffect(() => {
-  //    getDoc();
-  //  }, [])
   
 
 
+  
+team.sort(compare);
 
+console.log(team)
+console.log(team)
+  
 
 
 
@@ -165,7 +189,7 @@ const SamplePrevArrow=(props)=> {
       </div>
 
       <Slider  ref={slider} {...settings}>
-        {blogs?.map((item, index) => {
+        {team?.map((item, index) => {
           return <BasicCard key={index} item={item} />;
         })}
       </Slider>
