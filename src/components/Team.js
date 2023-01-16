@@ -4,6 +4,7 @@ import '../assets/ComponentDesign/Team.css';
 import BasicCard from "./TeamCard";
 import { db } from '../firebase';
 import { getDoc, doc,getDocs,  collection} from "firebase/firestore"; 
+import { BookSharp } from "@mui/icons-material";
 
 const SampleNextArrow=(props) =>{
   const { className, style, onClick } = props;
@@ -34,43 +35,36 @@ const SamplePrevArrow=(props)=> {
 
   const Team = () => {
 
-    const [blogs,setBlogs]=useState([])
-    const [year, setYear]= useState({})
     const [team, setTeam]= useState([]);
-    const fetchBlogs=async()=>{
-      const querySnapshot = await getDocs(collection(db, "teams"))
-      
-     
-      //doc is document of collection and doc.data() is object in that doc. In book, all objects have been passed with index 0,1..
-  // querySnapshot is an is an array object of docs.
-  
-  const data= querySnapshot.docs.map((doc)=>({...doc.data(),}));
-  setBlogs(data);
-  
-  
-  console.log(blogs);
-  setYear(blogs[7])
-  console.log(year);
- 
-  setTeam(year.members);
-  console.log(team);
+
+const docRef = doc(db, 'teams', 'team_2022-23')
+
+// getDoc(docRef).then((doc)=>{
+//   // console.log(doc.data().members)
+//   let allData= [];
+// doc.data().members.map((item)=>{
+//    allData.push(item);
+// })
+// console.log(allData)
+
+// })
+
+
+
+useEffect(()=>{
+  const fetchTeam= async ()=>{
+    const docSnap= await getDoc(docRef);
+    if (docSnap.exists()){
+      const allData= {
+        ...docSnap.data(),
+      }
+      console.log(allData)
+      setTeam(allData.members);
+      console.log(team)
     }
-    useEffect(() => {
-      fetchBlogs();
-      }, [])
-  
-
-
-
-
-
-
-
-
-
-
-
-
+  };
+  fetchTeam();
+}, []);
 
 
   
@@ -89,14 +83,11 @@ const SamplePrevArrow=(props)=> {
   }
   
   
-
+team.sort(compare)
 
   
-team.sort(compare);
 
-console.log(team)
-console.log(team)
-  
+  console.log(team)
 
 
 
@@ -176,7 +167,7 @@ console.log(team)
 						   <h2 style={{color:"#E5E4E2"}}>Our Team</h2>
                         </div>
 
-                        <div class="container text_align_center"> 
+                        <div class="container "> 
         <button onClick={() => slider?.current?.slickPrev()} type="button" style={{marginRight:"15px", borderRadius: "50%"}} className="btn btn-primary btn-floating btn-dark">
         <i class="fa-solid fa-2x fa-arrow-left"></i>
         </button>
