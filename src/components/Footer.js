@@ -30,7 +30,7 @@ const Footer = () => {
                     
                     <div className="col item social"><a href="#"><i className="icon ion-social-facebook"></i></a><a href="#"><i className="icon ion-social-twitter"></i></a><a href="#"><i className="icon ion-social-snapchat"></i></a><a href="#"><i className="icon ion-social-instagram"></i></a></div>
                 </div>
-                <p className="copyright" style={{color:"white", fontSize:"15px"}}>Developed by: Imad Bin Asad<a href="https://github.com/imad10902"><i className="icon ion-social-github" style={{color: "white", size:"30px", marginLeft:"5px"}}></i></a></p>
+                <p className="copyright" style={{color:"white", fontSize:"15px"}}>Developed by: Imad Bin Asad<a target="blank" href="https://github.com/imad10902"><i className="icon ion-social-github" style={{color: "white", size:"30px", marginLeft:"5px"}}></i></a></p>
             </div>
         </footer>
     </div>

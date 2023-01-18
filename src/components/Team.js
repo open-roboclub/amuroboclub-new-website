@@ -116,8 +116,8 @@ team.sort(compare)
       {
         breakpoint: 1424,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 2,
           infinite: true,
           
         },
