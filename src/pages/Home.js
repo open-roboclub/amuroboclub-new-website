@@ -8,13 +8,14 @@ import './css/style.css';
 // import './css/custom.css';
 // import './css/responsive.css';
 // import './css/responsiveslides.css';
-import './css/custom.css';
+import { Link } from "react-router-dom";
 import Test from '../components/Test';
 import Benefits from '../components/Benefits';
 import Team from '../components/Team';
 import Achievements from '../components/Achievements';
 
 import '../assets/ComponentDesign/Navbar.css';
+import '../assets/ComponentDesign/Hover.css';
 
 // import ParticleBackground from 'react-particle-backgrounds'
 
@@ -64,20 +65,7 @@ opacity: 0.98,
 
 
 
-      const form = useRef();
-
-      const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_oa8v4dk', 'template_rafm2to', form.current, 'LpfTSt9YjR7oLm7Am')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-          e.target.reset();
-        };
-
+ 
 
 
 
@@ -93,12 +81,13 @@ opacity: 0.98,
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-  <a class="navbar-brand" href="#"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px"}} alt="image" /></a>
+  <a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px"}} alt="image" /></Link></a>
 
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    {/* <span class="navbar-toggler-icon"></span> */}
+    <i class="fa-solid fa-bars" style={{color:"white"}}></i>
   </button>
 
  
@@ -107,27 +96,27 @@ opacity: 0.98,
     
     <ul class="navbar-nav mr-auto" >
       <li class="nav-item active" style={{fontSize:"18px"}}>
-        <a class="nav-link" href="#"><AnchorLink href='#achievements' style={{color:"white"}}>Achievements<i class="fa-solid fa-1x fa-trophy" style={{marginLeft:"4px"}}></i></AnchorLink>
+      <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white"}}>Major Projects<i class="fa-solid fa-1x fa-wrench" style={{marginLeft:"4px"}}></i></span>
           <span class="sr-only">(current)</span>
-        </a>
+        </a></AnchorLink>
       </li>
       <li class="nav-item" style={{fontSize:"18px"}}>
-        <a class="nav-link active" href="#"><AnchorLink href='#benefits' style={{color:"white"}}>Benefits<i class="fa-solid fa-shield-halved" style={{marginLeft:"4px"}}></i></AnchorLink></a>
+      <Link to='/projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white"}}>Projects<i class="fa-solid fa-gear" style={{marginLeft:"4px"}}></i></span></a></Link>
       </li>
       <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link" href="#"><AnchorLink href='#team' style={{color:"white"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
+        <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
       </li>
       <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link" href="#">Events<i class="fa-solid fa-calendar-days" style={{marginLeft:"4px"}}></i></a>
+        <a class="nav-link hover-underline-animation" href="#">Events<i class="fa-solid fa-calendar-days" style={{marginLeft:"4px"}}></i></a>
       </li>
       <li class="nav-item active"style={{fontSize:"18px", color:"white",}}>
-        <a class="nav-link" href="#"  style={{zIndex: -1}} data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
+        <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
       </li>
       <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link" href="#" data-toggle="modal" data-backdrop="false" data-target="#modalContactForm">Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></a>
+        <a class="nav-link hover-underline-animation" href="mailto:amuroboclub@gmail.com">Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></a>
       </li>
       <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing">Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></a>
+        <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing">Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></a>
       </li>
 
 
@@ -255,7 +244,7 @@ opacity: 0.98,
 
 
 
-
+<Test/>
    
 
 
@@ -288,12 +277,12 @@ opacity: 0.98,
         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
 <Achievements/></AnimationOnScroll>
 <div className="heading_main text_align_center" style={{paddingTop:"135px", paddingBottom:"0px"}}>
-						   <h2 style={{color:"#E5E4E2"}}>Featured Projects</h2>
+						   <h2 style={{color:"#E5E4E2"}}>Major Projects</h2>
                         </div>
 	
    
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.8">
-  <Cards/>
+  <Cards />
 </AnimationOnScroll>
   
 
@@ -316,55 +305,6 @@ opacity: 0.98,
 
 
 
-
- <form ref={form} onSubmit={sendEmail}>
-    <div id='email'>
-      <div className="modal fade" id="modalContactForm" tabindex="-1" role="dialog" ariaLabelledby="myModalLabel"
-  aria-hidden="true">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content">
-      <div className="modal-header text-center">
-        <h4 className="modal-title w-100 font-weight-bold" style={{color: "black"}}>Write to us</h4>
-        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div className="modal-body mx-3">
-        <div className="md-form mb-5">
-          <i className="fas fa-user prefix grey-text"></i><label data-error="wrong" data-success="right" for="form34">&nbsp;&nbsp;&nbsp;Your name</label>
-          <input type="text" id="form34" className="form-control validate" name='name'/>
-          
-        </div>
-
-        <div className="md-form mb-5">
-          <i className="fas fa-envelope prefix grey-text"></i><label data-error="wrong" data-success="right" for="form29">&nbsp;&nbsp;&nbsp;Your email</label>
-          <input type="email" id="form29" className="form-control validate" name='email'/>
-          
-        </div>
-
-        <div className="md-form mb-5">
-          <i className="fas fa-tag prefix grey-text"></i><label data-error="wrong" data-success="right" for="form32">&nbsp;&nbsp;&nbsp;Subject</label>
-          <input type="text" id="form32" className="form-control validate" name='subject'/>
-          
-        </div>
-
-        <div className="md-form">
-          <i className="fas fa-pencil prefix grey-text"></i><label data-error="wrong" data-success="right" for="form8">&nbsp;&nbsp;&nbsp;Your message</label>
-          <textarea type="text" id="form8" name='message' className="md-textarea form-control" rows="4"></textarea>
-          
-        </div>
-
-      </div>
-      <div className="modal-footer d-flex justify-content-center">
-        <button className="btn btn-unique">Send <i className="fas fa-paper-plane-o ml-1"></i></button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-    </form>
 
 
 

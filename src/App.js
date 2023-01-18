@@ -1,59 +1,25 @@
-import React from 'react';
-//import { AppBar, Container, Toolbar, Typography, Box, Button, Badge, IconButton, CssBaseline } from '@material-ui/core';
-//import useStyles from './styles';
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
-import { useState, useEffect } from 'react';
-import { ToastContainer } from "react-toastify";
-import {auth} from './firebase';
-import About from "./pages/About";
-import Auth from "./pages/Auth";
+import React, { useState } from 'react';
 import Home from './pages/Home';
-import Blogs from './pages/Blogs';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-import Header from './components/Header';
-import "react-toastify/dist/ReactToastify.css";
-import './styles.scss';
-import "./media-query.css";
-import { signOut } from 'firebase/auth';
-//import './styles.css';
-
+import Projects from './pages/Projects';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Robocon2023 from './pages/Robocon2023';
+import Project from './pages/Project';
 const App = () => {
-  const [active, setActive]= useState('home'); //passing functions, variables as props to child component
-  const [user, setUser] = useState(null);
-  const navigate= useNavigate();
-  
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        setUser(authUser);
-      } else {
-        setUser(null);
-      }
-    });
-  }, []);
-
-  const handleLogout= ()=>{
-     signOut(auth).then(()=>{
-      setUser(null);
-      setActive("login");
-      navigate("/auth");
-     })
-  };
-
+// const [project, setProject]= useState([]);
   return (
     <div>
-      <Home/>
-      {/* <Header setActive={setActive} active={active} user={user} handleLogout={handleLogout}/>
-      <ToastContainer position='top-center' /> */}
-    {/* <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blogs" element={<Blogs />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/login" element={<Auth setActive={setActive}  />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes> */}
+       <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/robocon2023" element={<Robocon2023/>}/>
+        </Routes>
+      </Router>
     </div>
   )
 }
