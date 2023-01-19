@@ -15,7 +15,7 @@ opacity: 0.98,
         <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-<a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px"}} alt="image" /></Link></a>
+<a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
 
 
 
@@ -29,7 +29,7 @@ opacity: 0.98,
 
 
             <div className="heading_main text_align_center" style={{paddingTop:"25px"}}>
-						   <h1 style={{color:"#E5E4E2", fontWeight:"bold", fontSize:"35px", margin:"0px"}}>ABU Robocon 2023</h1>
+						   <h1 style={{color:"#E5E4E2", fontWeight:"bold", fontSize:"35px", margin:"0px"}}>DD Robocon 2023</h1>
                         </div>
                         
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">

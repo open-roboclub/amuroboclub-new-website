@@ -33,7 +33,7 @@ const Introduction = () => {
                 </div>
 				<div className="col-md-6">
                     <div className="full" style={{paddingTop: "50px"}}>
-                        <img style={{height:"375px", borderRadius:"40px"}} src={content[0].aboutImages[0].image} alt="#" />
+                        <img style={{height:"375px", borderRadius:"40px", userSelect: "none"}} src={content[0].aboutImages[0].image} alt="#" />
                     </div>
                 </div>
             </div>

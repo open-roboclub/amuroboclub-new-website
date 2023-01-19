@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #7f7fd5;
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+} */
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #1e1e1e;
+background: linear-gradient(to bottom, #292a2a, #333434);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+
+
+.user__info > small {
+  color: #666;
+}
+.trunket {
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+ 
+  -webkit-line-clamp: 10;
+
+}
+
+.hover-underline-animation1 {
+    display: inline-block;
+    position: relative;
+    color: #121313;
+  }
+  
+  .hover-underline-animation1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1d1d1d;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

@@ -12,7 +12,7 @@ const Projects = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.98,
+opacity: 0.97,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };
@@ -74,7 +74,7 @@ console.log(blogs);
     <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-<a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px"}} alt="image" /></Link></a>
+<a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
 
 
 
