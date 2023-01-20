@@ -149,27 +149,7 @@ opacity: 0.97,
 
 
 
-{/* <ParticleBackground settings={settings} /> */}
-{/* <section className="banner_main">
-      <div className="container">
-         <div className="row">
-            <div className="col-md-7 col-lg-7">
-               <div className="text-bg">
-                  <h1 style={{opacity: "0"}}>Trusted and <br/><br/>Professional Advisers</h1>
-                  
-                  
-                  
-                  
-               </div>
-            </div>
-            <div className="col-md-5 col-lg-5">
-               <div className="ban_img">
-                  <figure style={{opacity: "0"}}><img src="images/ba_ing.png" alt="#" /></figure>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>    */}
+
 
 
   
@@ -188,8 +168,8 @@ opacity: 0.97,
         <div className="container">
             <div className="row">
             <div className="col-md-6">
-                    <div className="full" style={{paddingTop: "80px"}}>
-                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"530px", borderRadius:"40px", userSelect: "none"}}/>
+                    <div className="full" style={{paddingTop: "110px"}}>
+                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"380px", borderRadius:"40px", userSelect: "none"}}/>
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
@@ -198,7 +178,7 @@ opacity: 0.97,
 						   <h2 style={{color:"#E5E4E2"}}>Why Join Us
                           </h2>
                         </div>
-						  <p style={{color:"#E5E4E2", textAlign: "justify"}} >{content[0].whyjoin}</p>
+						  <p style={{color:"#E5E4E2", textAlign: "justify",fontSize:"12px"}} >{content[0].whyjoin}</p>
 						
                     </div>
                 </div>
@@ -214,7 +194,7 @@ opacity: 0.97,
                         </div>
     <div className="section margin-top_50">
         <div className="container">
-            <div className="row"><p style={{color:"#E5E4E2", textAlign: "justify", marginLeft:"10px", marginRight:"10px"}}>{content[0].whatMakesUsDifferent}</p>
+            <div className="row "><p style={{color:"#E5E4E2", textAlign: "justify", marginLeft:"10px", marginRight:"10px", fontSize:"20px",fontFamily:"Lucida Handwriting", fontStyle:"italic"}}>{content[0].whatMakesUsDifferent}...</p>
               </div></div></div></AnimationOnScroll>
 
 
