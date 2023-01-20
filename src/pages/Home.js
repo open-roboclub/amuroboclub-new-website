@@ -95,43 +95,43 @@ opacity: 0.97,
 
     
     <ul class="navbar-nav mr-auto" >
-    <li class="nav-item" style={{fontSize:"18px"}}>
+    <li class="nav-item" style={{fontSize:"17px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
       </li>
-      <li class="nav-item active" style={{fontSize:"18px"}}>
+      <li class="nav-item active" style={{fontSize:"17px"}}>
       <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-1x fa-wrench" style={{marginLeft:"4px"}}></i></span>
           <span class="sr-only">(current)</span>
         </a></AnchorLink>
       </li>
-    <li style={{fontSize:"18px", }}>
+    <li style={{fontSize:"17px", }}>
     <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
     </li>
       
-      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
+      <li class="nav-item active"style={{fontSize:"17px", color:"white"}}>
         <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white", userSelect: "none"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
       </li>
      
-      <li class="nav-item active"style={{fontSize:"18px", color:"white", userSelect: "none"}}>
+      <li class="nav-item active"style={{fontSize:"17px", color:"white", userSelect: "none"}}>
         <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
       </li>
      
-     <li style={{fontSize:"18px",}}>
+     <li style={{fontSize:"17px",}}>
      <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
      </li>
-
+<li style={{fontSize:"17px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
 
      
-      <li class="nav-item dropdown" style={{fontSize:"18px",}}>
+      {/* <li class="nav-item dropdown" style={{fontSize:"17px",}}>
      <a class="nav-link dropdown-toggle hover-underline-animation" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" style={{color:"white",  cursor: "pointer", userSelect: "none"}}>More<i class="fa-solid fa-caret-down" style={{marginLeft:"2px"}}></i></a>
         <div class="dropdown-menu dropdown-menu-dark" style={{background:"black"}} aria-labelledby="navbarDropdownMenuLink">
         
          
-          <div><AnchorLink href='#benefits'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", fontSize:"18px", userSelect: "none"}}>Benefits<i class="fa-solid fa-handshake" style={{marginLeft:"4px"}}></i></span>
+          <div><AnchorLink href='#benefits'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", fontSize:"17px", userSelect: "none"}}>Benefits<i class="fa-solid fa-handshake" style={{marginLeft:"4px"}}></i></span>
         </a></AnchorLink></div>
-      <div> <Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", fontSize:"18px"}}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></div> 
+      <div> </div> 
         </div>
-      </li>
+      </li> */}
 
     </ul>
   
@@ -195,7 +195,7 @@ opacity: 0.97,
                 <div className="col-md-6 layout_padding_2">
                     <div className="full">
                         <div className="heading_main text_align_center">
-						   <h2 style={{color:"#E5E4E2"}}>Why Join US
+						   <h2 style={{color:"#E5E4E2"}}>Why Join Us
                           </h2>
                         </div>
 						  <p style={{color:"#E5E4E2", textAlign: "justify"}} >{content[0].whyjoin}</p>

@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ImageSlider = () => {
   return (
-    <div className="carousel-wrapper text-center" style={{marginLeft:"10px", marginRight:"10px", paddingTop:"0px"}} >
+    <div className="carousel-wrapper text-center" style={{marginLeft:"40px", marginRight:"40px", paddingTop:"10px"}} >
     <Carousel >
         <div>
             <img src={content[0].galleryImages[0].image} />
