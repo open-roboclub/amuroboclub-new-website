@@ -11,7 +11,7 @@ const PhotoGallery = () => {
   return (
     
     <div className='text-center'>
-      <Carousel activeIndex={index} onSelect={handleSelect} style={{marginLeft:"120px", marginRight:"120px"}} >
+      <Carousel activeIndex={index} onSelect={handleSelect} style={{marginLeft:"20px", marginRight:"20px"}} >
       <Carousel.Item>
         <img
           className="d-block w-100"

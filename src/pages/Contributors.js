@@ -61,7 +61,7 @@ console.log(contributors)
              return(
             
 
-    <div class=" card8 " key={index} style={{marginLeft:"2px", marginRight:"2px"}}>
+    <div class=" card8 " key={index} style={{marginLeft:"4px", marginRight:"2px"}}>
         <div class="face face1">
             <div class="content">
            <div>
@@ -76,7 +76,7 @@ console.log(contributors)
         <div class="face face2">
             <div class="content">
             
-            <h1 style={{color:"white"}}>{item.amount}</h1><br/><br/>
+            <h3 style={{color:"white"}}>{item.amount}</h3><br/><br/>
             <h6 style={{color:"white" }}>{item.description}</h6>
                     <p >{item.date}</p>
                     
