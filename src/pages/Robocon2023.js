@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import content from '../assets/cms/content.json'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Footer from '../components/Footer';
 const Robocon2023 = () => {
   const myStyle={
     backgroundImage: 
@@ -60,7 +61,7 @@ opacity: 0.98,
 
               
 
-                        
+              <Footer />               
     </div>
   )
 }

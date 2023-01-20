@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import { getDocs, collection} from "firebase/firestore"; 
 import { db } from '../firebase';
+import Footer from '../components/Footer';
 import '../assets/ComponentDesign/Contributors.css';
 const Contributors = () => {
   const myStyle={
@@ -95,6 +96,7 @@ console.log(contributors)
     </div>
     </div>
     </div>
+    <Footer />
     </>
   )
 }

@@ -121,9 +121,9 @@ opacity: 0.97,
 
 
      
-      <li class="nav-item dropdown" >
+      <li class="nav-item dropdown" style={{fontSize:"18px",}}>
      <a class="nav-link dropdown-toggle hover-underline-animation" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style={{color:"white", fontSize:"18px", cursor: "pointer", userSelect: "none"}}>More<i class="fa-solid fa-caret-down" style={{marginLeft:"2px"}}></i></a>
+          aria-haspopup="true" aria-expanded="false" style={{color:"white",  cursor: "pointer", userSelect: "none"}}>More<i class="fa-solid fa-caret-down" style={{marginLeft:"2px"}}></i></a>
         <div class="dropdown-menu dropdown-menu-dark" style={{background:"black"}} aria-labelledby="navbarDropdownMenuLink">
         
          
