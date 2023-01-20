@@ -27,13 +27,13 @@ const Introduction = () => {
                         <div className="heading_main text_align_center">
 						   <h2 style={{color:"#E5E4E2"}}>What is AMURoboclub</h2>
                         </div>
-						  <p style={{color:"#E5E4E2", textAlign: "justify"}}>{content[0].about}</p>
+						  <p style={{color:"#E5E4E2", textAlign: "justify", fontSize:"12px"}}>{content[0].about}</p>
 						
                     </div>
                 </div>
 				<div className="col-md-6">
-                    <div className="full" style={{paddingTop: "50px"}}>
-                        <img style={{height:"375px", borderRadius:"40px", userSelect: "none"}} src={content[0].aboutImages[0].image} alt="#" />
+                    <div className="full" style={{marginTop: "70px"}}>
+                        <img style={{height:"300px", borderRadius:"40px", userSelect: "none"}} src={content[0].aboutImages[0].image} alt="#" />
                     </div>
                 </div>
             </div>
