@@ -2,6 +2,7 @@
     display: inline-block;
     position: relative;
     color: #fafcfd;
+    margin-top: -80px;
   }
   
   .hover-underline-animation::after {

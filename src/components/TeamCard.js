@@ -23,7 +23,7 @@ const TeamCard = ({ item }) => {
           alt="No image to show" style={{height: "120px", width:"120px", borderRadius:"50%"}}/>
       </div>
       <div class="card-body text-center">
-        <h4 class="card-title font-weight-bold" style={{color: "rgb(35, 35, 35)"}}>{item.name}</h4>
+        <h4 class="card-title font-weight-bold" style={{color: "rgb(35, 35, 35)", fontSize:"11px"}}>{item.name}</h4>
         <hr/>
         <p style={{fontWeight:"bold"}}>{item.position}</p>
         <div class="media-icons">

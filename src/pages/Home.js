@@ -46,7 +46,7 @@ const Home = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.98,
+opacity: 0.97,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };
@@ -81,12 +81,12 @@ opacity: 0.98,
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-  <a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px"}} alt="image" /></Link></a>
+  <a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
 
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    {/* <span class="navbar-toggler-icon"></span> */}
+  
     <i class="fa-solid fa-bars" style={{color:"white"}}></i>
   </button>
 
@@ -95,50 +95,48 @@ opacity: 0.98,
 
     
     <ul class="navbar-nav mr-auto" >
+    <li class="nav-item" style={{fontSize:"18px"}}>
+      <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
+      </li>
       <li class="nav-item active" style={{fontSize:"18px"}}>
-      <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white"}}>Major Projects<i class="fa-solid fa-1x fa-wrench" style={{marginLeft:"4px"}}></i></span>
+      <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-1x fa-wrench" style={{marginLeft:"4px"}}></i></span>
           <span class="sr-only">(current)</span>
         </a></AnchorLink>
       </li>
-      <li class="nav-item" style={{fontSize:"18px"}}>
-      <Link to='/projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white"}}>Projects<i class="fa-solid fa-gear" style={{marginLeft:"4px"}}></i></span></a></Link>
-      </li>
+    <li style={{fontSize:"18px", }}>
+    <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
+    </li>
+      
       <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
+        <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white", userSelect: "none"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link hover-underline-animation" href="#">Events<i class="fa-solid fa-calendar-days" style={{marginLeft:"4px"}}></i></a>
-      </li>
-      <li class="nav-item active"style={{fontSize:"18px", color:"white",}}>
+     
+      <li class="nav-item active"style={{fontSize:"18px", color:"white", userSelect: "none"}}>
         <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
       </li>
-      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link hover-underline-animation" href="mailto:amuroboclub@gmail.com">Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></a>
-      </li>
-      <li class="nav-item active"style={{fontSize:"18px", color:"white"}}>
-        <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing">Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></a>
-      </li>
+     
+     <li style={{fontSize:"18px",}}>
+     <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
+     </li>
 
 
      
-      {/* <li class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+      <li class="nav-item dropdown" style={{fontSize:"18px",}}>
+     <a class="nav-link dropdown-toggle hover-underline-animation" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style={{color:"white",  cursor: "pointer", userSelect: "none"}}>More<i class="fa-solid fa-caret-down" style={{marginLeft:"2px"}}></i></a>
+        <div class="dropdown-menu dropdown-menu-dark" style={{background:"black"}} aria-labelledby="navbarDropdownMenuLink">
+        
+         
+          <div><AnchorLink href='#benefits'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", fontSize:"18px", userSelect: "none"}}>Benefits<i class="fa-solid fa-handshake" style={{marginLeft:"4px"}}></i></span>
+        </a></AnchorLink></div>
+      <div> <Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", fontSize:"18px"}}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></div> 
         </div>
-      </li> */}
+      </li>
 
     </ul>
   
 
-    {/* <form class="form-inline">
-      <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
-      </div>
-    </form> */}
+ 
   </div>
  
 
@@ -177,36 +175,6 @@ opacity: 0.98,
   
 
 
-{/* 
-    <div class="section tabbar_menu">
-	   <div class="container">
-	      <div class="row">
-		      <div class="col-md-12">
-			     <div class="tab_menu">
-				    <ul>
-					  <AnchorLink href='#achievements'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"8px"}}>Achievements</span></a></li></AnchorLink>
-                       <AnchorLink href='#benefits'> <li><a href="#"><span class="icon"></span><span style={{marginLeft:"24px"}}>Benefits</span></a></li></AnchorLink>
-					   <li><a href="#"><span class="icon"></span><span style={{marginLeft:"16px"}}>Events</span></a></li>
-                       <AnchorLink href='#team'> <li><a href="#"><span>Team</span></a></li></AnchorLink>
-					   <li><a href='#' type="button"  data-toggle="modal" data-target="#modalRegular"><span style={{color: "black"}}> Location</span></a></li>
-					   <li><a href="#" data-toggle="modal" data-target="#modalContactForm"><span class="icon"></span><span>Email</span></a></li>
-					   <li><a href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span class="icon"></span><span>Newsletter</span></a></li>
-                       
-                       
-                       
-                       
-
-
-                       
-					</ul>
-				 </div>
-			  </div>
-		  </div>
-	   </div>
-	</div> */}
-   
-
-
 
 	{/* <!-- section --> */} 
 
@@ -221,7 +189,7 @@ opacity: 0.98,
             <div className="row">
             <div className="col-md-6">
                     <div className="full" style={{paddingTop: "80px"}}>
-                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"400px", borderRadius:"40px"}}/>
+                        <img src={content[0].aboutImages[1].image} alt="#" style={{height:"530px", borderRadius:"40px", userSelect: "none"}}/>
                     </div>
                 </div>
                 <div className="col-md-6 layout_padding_2">
@@ -240,8 +208,14 @@ opacity: 0.98,
     </div>
 
     </AnimationOnScroll>
-
-
+    <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true" offset={15}  duration="0.5">
+    <div className="heading_main text_align_center" >
+						   <h2 style={{color:"#E5E4E2"}}>What Makes Us Different</h2>
+                        </div>
+    <div className="section margin-top_50">
+        <div className="container">
+            <div className="row"><p style={{color:"#E5E4E2", textAlign: "justify", marginLeft:"10px", marginRight:"10px"}}>{content[0].whatMakesUsDifferent}</p>
+              </div></div></div></AnimationOnScroll>
 
 
 <Test/>
@@ -277,7 +251,7 @@ opacity: 0.98,
         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
 <Achievements/></AnimationOnScroll>
 <div className="heading_main text_align_center" style={{paddingTop:"135px", paddingBottom:"0px"}}>
-						   <h2 style={{color:"#E5E4E2"}}>Major Projects</h2>
+						   <h2 style={{color:"#E5E4E2"}}>Featured Projects</h2>
                         </div>
 	
    
