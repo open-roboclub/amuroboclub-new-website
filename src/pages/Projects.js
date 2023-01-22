@@ -96,6 +96,9 @@ setIsLoading(false)
     <li class="nav-item" style={{fontSize:"17px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
       </li>
+      <li class="nav-item" style={{fontSize:"17px"}}>
+    <HashLink smooth to='/#projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-wrench" style={{marginLeft:"4px"}}></i></span></a></HashLink>
+    </li>
   <li style={{fontSize:"17px", }}>
   <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
   </li>
@@ -157,7 +160,7 @@ setIsLoading(false)
                          <div className="card-body text-center">
                                 <h5 className="card-title" title={item.name} style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>{item.name}</h5>
                                  <p className="card-text"></p>
-                                  <button class="btn btn-primary btn-dark" data-backdrop="false" data-toggle="modal"  data-target="#exampleModalLong"
+                                  <button class="btn btn-primary btn-dark" data-backdrop="true" data-toggle="modal"  data-target="#exampleModalLong"
                                   onClick={()=>getData(item.projectImg[0], item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
                                  </button>
                                   </div>

@@ -1,7 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react'
 import Particles, { ISourceOptions } from "react-tsparticles";
 import Footer from '../components/Footer';
-import ImageSlider from '../components/ImageSlider';
+
 // import './css/bootstrap.min.css';
 // import './css/pogo-slider.min.css';
 import './css/style.css';
@@ -96,6 +96,9 @@ opacity: 0.95,
 
     
     <ul class="navbar-nav mr-auto" >
+    <li class="nav-item" style={{fontSize:"17px"}}>
+    <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home<i class="fa-solid fa-house" style={{marginLeft:"4px"}}></i></span></a></Link>
+    </li>
     <li class="nav-item" style={{fontSize:"17px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
       </li>
@@ -199,8 +202,7 @@ opacity: 0.95,
               </div></div></div></AnimationOnScroll>
 
 
-<Test/>
-   
+
 
 
 
@@ -275,14 +277,13 @@ opacity: 0.95,
 
 
 
-<div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
-						   <h2 style={{color:"#E5E4E2"}}>Photo Gallery</h2>
-                        </div>
+
 
 
                        
-                        <ImageSlider/>
-                    
+                        
+<Test/>
+   
 
     <div style={{marginTop:"70px"}}>
     <Footer /></div>
