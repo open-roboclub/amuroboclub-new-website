@@ -47,7 +47,7 @@ const Home = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.97,
+opacity: 0.95,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };

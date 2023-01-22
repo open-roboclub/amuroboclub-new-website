@@ -4,17 +4,18 @@ import content from '../assets/cms/content.json'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Location from '../components/Location';
 import Footer from '../components/Footer';
+import { HashLink } from 'react-router-hash-link';
 const Robocon2023 = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.97,
+opacity: 0.95,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };
   return (
     <div style={myStyle}>
-         <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
+          <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
 <a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
@@ -41,7 +42,9 @@ opacity: 0.97,
   <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
   </li>
     
-    
+  <li class="nav-item" style={{fontSize:"17px"}}>
+    <HashLink smooth to='/#team' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></span></a></HashLink>
+    </li>
    
     <li class="nav-item active"style={{fontSize:"17px", color:"white", userSelect: "none"}}>
       <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
@@ -63,7 +66,6 @@ opacity: 0.97,
 
 
 </nav>
-
 
 
             <div className="heading_main text_align_center" style={{paddingTop:"25px"}}>
