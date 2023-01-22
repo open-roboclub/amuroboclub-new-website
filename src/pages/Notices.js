@@ -162,7 +162,7 @@ const [tempdata, setTempdata]= useState([]);
     
     </div>
     {item.details.length>=320?
-    <div style={{textAlign:"center"}}><a href='notice' className='hover-underline-animation1' data-backdrop="false" data-toggle="modal"  data-target="#exampleModalLong2"
+    <div style={{textAlign:"center"}}><a href='notice' className='hover-underline-animation1' data-backdrop="true" data-toggle="modal"  data-target="#exampleModalLong2"
     onClick={()=>getData(item.date, item.eventName, item.details, item.link)} style={{fontSize:"20px", color:"black", userSelect:"none"}}>View More</a></div>:""
     }    
     <br/>             

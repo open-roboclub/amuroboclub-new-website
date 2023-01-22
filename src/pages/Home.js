@@ -1,7 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react'
 import Particles, { ISourceOptions } from "react-tsparticles";
 import Footer from '../components/Footer';
-import ImageSlider from '../components/ImageSlider';
+
 // import './css/bootstrap.min.css';
 // import './css/pogo-slider.min.css';
 import './css/style.css';
@@ -199,8 +199,7 @@ opacity: 0.95,
               </div></div></div></AnimationOnScroll>
 
 
-<Test/>
-   
+
 
 
 
@@ -275,14 +274,13 @@ opacity: 0.95,
 
 
 
-<div className="heading_main text_align_center" style={{paddingTop:"70px"}}>
-						   <h2 style={{color:"#E5E4E2"}}>Photo Gallery</h2>
-                        </div>
+
 
 
                        
-                        <ImageSlider/>
-                    
+                        
+<Test/>
+   
 
     <div style={{marginTop:"70px"}}>
     <Footer /></div>

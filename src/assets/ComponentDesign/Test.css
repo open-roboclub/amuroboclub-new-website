@@ -1,0 +1,9 @@
+.carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 576px) {
+    #carouselExampleIndicators {
+      max-width: 600px;
+    }
+  }

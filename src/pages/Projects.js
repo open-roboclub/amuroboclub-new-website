@@ -157,7 +157,7 @@ setIsLoading(false)
                          <div className="card-body text-center">
                                 <h5 className="card-title" title={item.name} style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>{item.name}</h5>
                                  <p className="card-text"></p>
-                                  <button class="btn btn-primary btn-dark" data-backdrop="false" data-toggle="modal"  data-target="#exampleModalLong"
+                                  <button class="btn btn-primary btn-dark" data-backdrop="true" data-toggle="modal"  data-target="#exampleModalLong"
                                   onClick={()=>getData(item.projectImg[0], item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
                                  </button>
                                   </div>
