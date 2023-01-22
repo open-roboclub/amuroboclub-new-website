@@ -6,6 +6,7 @@ import '../assets/ComponentDesign/notice.css';
 import Footer from '../components/Footer';
 import NoticeModal from '../components/NoticeModal';
 import Loading from '../components/LoadingStyle';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Location from '../components/Location';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 const Notices = () => {
@@ -132,10 +133,12 @@ const [tempdata, setTempdata]= useState([]);
 
                         
 {isLoading?<div className='row justify-content-center align-item-center'><Loading/></div>:
-
+ <AnimationOnScroll animateIn="animate__fadeIn" animateOnce="true"  duration="1.4">
                         <div class="container container2">
+                             
                         {notices.slice(0, 6).map((item, index)=>{
              return(
+             
   <div class="card card2" key={index}>
     <div class="card__body">
       <span class="tag tag-blue" style={{userSelect: "none"}}>{item.date}</span>
@@ -155,13 +158,13 @@ const [tempdata, setTempdata]= useState([]);
     </div>
     {item.details.length>=320?
     <div style={{textAlign:"center"}}><a href='notice' className='hover-underline-animation1' data-backdrop="false" data-toggle="modal"  data-target="#exampleModalLong2"
-    onClick={()=>getData(item.date, item.eventName, item.details, item.link)} style={{fontSize:"20px", color:"black"}}>View More</a></div>:""
+    onClick={()=>getData(item.date, item.eventName, item.details, item.link)} style={{fontSize:"20px", color:"black", userSelect:"none"}}>View More</a></div>:""
     }    
     <br/>             
   </div>
   )
 })} 
-</div>}
+</div></AnimationOnScroll>}
 {
      model === true ? <NoticeModal date={tempdata[1]} eventName={tempdata[2]} details={tempdata[3]} link={tempdata[4]} hide={()=>setModel(false)}/>: ''
    }

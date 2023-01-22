@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { getDocs, collection} from "firebase/firestore"; 
 import { db } from '../firebase';
 import Footer from '../components/Footer';
-import Loading from '../components/LoadingHeart';
+import Loading from '../components/LoadingStyle';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Location from '../components/Location';
 import '../assets/ComponentDesign/Contributors.css';
 const Contributors = () => {
@@ -103,7 +104,7 @@ console.log(contributors)
                         
                 
  {isLoading?<div className='row justify-content-center align-item-center'><Loading/></div>:
- 
+   <AnimationOnScroll animateIn="animate__fadeIn" animateOnce="true"  duration="1.4">
     <div className='container container8  ' >
     <div className='card-deck justify-content-center'>
     {contributors.map((item, index)=>{
@@ -143,7 +144,7 @@ console.log(contributors)
 
    
     </div>
-    </div>
+    </div></AnimationOnScroll>
 }
     </div>
     <Location/>

@@ -5,7 +5,6 @@ import BasicCard from "./TeamCard";
 import { db } from '../firebase';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { getDoc, doc,getDocs,  collection} from "firebase/firestore"; 
-import { BookSharp } from "@mui/icons-material";
 import LoadingSpinner from '../components/LoadingSpinner';
 
 
@@ -39,8 +38,10 @@ const SamplePrevArrow=(props)=> {
   const Team = () => {
 
     const [team, setTeam]= useState([]);
+    const [facultyTeam, setFacultyTeam]= useState([]);
 
 const docRef = doc(db, 'teams', 'team_2022-23')
+const fac = doc(db, 'teams', 'oBN3RWaWFRu9JCMe5TDO')
 
 // getDoc(docRef).then((doc)=>{
 //   // console.log(doc.data().members)
@@ -70,6 +71,21 @@ useEffect(()=>{
   fetchTeam();
 }, []);
 
+useEffect(()=>{
+  const fetchTeam= async ()=>{
+    const docSnap= await getDoc(fac);
+    if (docSnap.exists()){
+      const allData= {
+        ...docSnap.data(),
+      }
+      console.log(allData)
+      setFacultyTeam(allData.members);
+      setIsLoading(false) 
+   
+    }
+  };
+  fetchTeam();
+}, []);
 
   
 
@@ -91,7 +107,8 @@ team.sort(compare)
 
   
 
-  console.log(team)
+console.log(facultyTeam)
+
 
 
 

@@ -8,7 +8,7 @@ const Robocon2023 = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.98,
+opacity: 0.97,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };
