@@ -97,6 +97,9 @@ const [tempdata, setTempdata]= useState([]);
   <li class="nav-item" style={{fontSize:"17px"}}>
     <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home<i class="fa-solid fa-house" style={{marginLeft:"4px"}}></i></span></a></Link>
     </li>
+    <li class="nav-item" style={{fontSize:"17px"}}>
+      <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
+      </li>
     <li class="nav-item active" style={{fontSize:"17px"}}>
     <li class="nav-item" style={{fontSize:"17px"}}>
     <HashLink smooth to='/#projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-wrench" style={{marginLeft:"4px"}}></i></span></a></HashLink>
