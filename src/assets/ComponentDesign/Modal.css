@@ -1,0 +1,33 @@
+.darkBG {
+    background: linear-gradient(to right, #01331a, #011d39); 
+
+}
+
+.btn8 {
+    border: 2px solid black;
+    background: var(--global-background);
+    color: black;
+    padding: 14px 28px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Green */
+  .success {
+    border-color: #f9faf9;
+    color: rgb(235, 243, 235);
+  }
+  
+  .success:hover {
+    background-color: #eff1f1;
+    color: rgb(15, 15, 15);
+  }
+
+  .btn10 {
+    border: 2px solid rgb(252, 250, 250);
+    background: var(--global-background);
+    color: rgb(251, 249, 249);
+    padding: 14px 28px;
+    font-size: 14px;
+    cursor: pointer;
+  }

@@ -10,7 +10,7 @@ import featuredProjects from '../assets/cms/constants';
 import content from "../assets/cms/content.json"
 
 
-
+import '../assets/ComponentDesign/Modal.css';
 
 
 
@@ -141,7 +141,7 @@ console.log(blogs);
          <div class="row">
            
          <div className="heading_main text_align_center" >
-      <button type="button" className="btn btn-light"><Link to="/projects" style={{ fontWeight: "bold" }}> More Projects</Link> </button></div>
+         <Link to="/projects" style={{ fontDecoration: "none" }}>  <button type="button" className="btn10 success"> More Projects </button></Link></div>
          </div>
       
     </>

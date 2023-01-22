@@ -138,8 +138,10 @@ setIsLoading(false)
 
 
                       
-  {isLoading ?   <div className='row justify-content-center align-item-center'><Loading/></div>: <section className='py-4 py-lg-5 container'  >
+  {isLoading ?   <div className='row justify-content-center align-item-center'><Loading/></div>:   <AnimationOnScroll animateIn="animate__fadeIn" animateOnce="true"  duration="1.4"><section className='py-4 py-lg-5 container'  >
+
         <div className='row justify-content-center align-item-center'>
+
          {blogs.map((item, index)=>{
              return(
                  <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' key={index}>
@@ -148,7 +150,7 @@ setIsLoading(false)
                 display: "flex",
                 paddingTop: "8px"}}/>
                          <div className="card-body text-center">
-                                <h5 className="card-title" style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>{item.name}</h5>
+                                <h5 className="card-title" title={item.name} style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>{item.name}</h5>
                                  <p className="card-text"></p>
                                   <button class="btn btn-primary btn-dark" data-backdrop="false" data-toggle="modal"  data-target="#exampleModalLong"
                                   onClick={()=>getData(item.projectImg[0], item.name, item.description, item.progress, item.teamMembers, item.date)}>More Information
@@ -170,7 +172,7 @@ setIsLoading(false)
          })}
        
         </div>
-   </section>
+   </section></AnimationOnScroll>
 }
    {
      model === true ? <Modals img={tempdata[1]} name={tempdata[2]} description={tempdata[3]} progress={tempdata[4]} teamMembers={tempdata[5]} date={tempdata[6]} hide={()=>setModel(false)}/>: ''
