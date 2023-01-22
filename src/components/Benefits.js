@@ -4,7 +4,19 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 const Benefits = () => {
   return (
    <div >
-      
+         <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+    </ul>
     <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true"  duration="0.7">
     <div id='benefits'>
     <div id="service" class="service">

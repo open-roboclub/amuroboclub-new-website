@@ -3,8 +3,11 @@ import Slider from "react-slick";
 import '../assets/ComponentDesign/Team.css';
 import BasicCard from "./TeamCard";
 import { db } from '../firebase';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { getDoc, doc,getDocs,  collection} from "firebase/firestore"; 
 import { BookSharp } from "@mui/icons-material";
+import LoadingSpinner from '../components/LoadingSpinner';
+
 
 const SampleNextArrow=(props) =>{
   const { className, style, onClick } = props;
@@ -49,7 +52,7 @@ const docRef = doc(db, 'teams', 'team_2022-23')
 
 // })
 
-
+const [isLoading, setIsLoading] = useState(true);
 
 useEffect(()=>{
   const fetchTeam= async ()=>{
@@ -60,7 +63,8 @@ useEffect(()=>{
       }
       console.log(allData)
       setTeam(allData.members);
-      console.log(team)
+      setIsLoading(false) 
+   
     }
   };
   fetchTeam();
@@ -178,14 +182,15 @@ team.sort(compare)
           <i class="fa-solid fa-2x fa-arrow-right"></i>
         </button>
       </div>
-
+{isLoading?<div className='row justify-content-center align-item-center'><LoadingSpinner/></div>:
+  <AnimationOnScroll animateIn="animate__bounceIn" animateOnce="true"  duration="1">
       <Slider  ref={slider} {...settings}>
         {team?.map((item, index) => {
           return <BasicCard key={index} item={item} />;
         })}
         
-      </Slider>
-      
+      </Slider></AnimationOnScroll>
+  }
     </div>
     </div>
   );

@@ -7,6 +7,7 @@ import ImageSlider from '../components/ImageSlider';
 import './css/style.css';
 // import './css/custom.css';
 // import './css/responsive.css';
+import LoadingSpinner from '../components/LoadingSpinner';
 // import './css/responsiveslides.css';
 import { Link } from "react-router-dom";
 import Test from '../components/Test';
@@ -265,10 +266,10 @@ opacity: 0.97,
 
     
 
-    <AnimationOnScroll animateIn="animate__bounceIn" animateOnce="true"  duration="1">
+  
 
 <Team/>
-</AnimationOnScroll>
+
 <Location/>
 
 

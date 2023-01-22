@@ -13,13 +13,9 @@
           
 //             <div className="collapse navbar-collapse">
 //               <ul className="navbar-nav me-auto mb-2 mb-lg-0" id='navbarSupportedContent'>
-//               {/* <Link to="/" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
-//                       active === "home" ? "active" : ""
-//                     }`} onClick={() => setActive("home")}>Home</li></Link> */}
+               
               
-//               {/* <Link to="/blogs" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
-//                       active === "blogs" ? "active" : ""
-//                     }`} onClick={() => setActive("blogs")}>Blogs</li></Link> */}
+              
 //               {/* <Link to="/contact" style={{ textDecoration: "none" }}><li className={`nav-item nav-link ${
 //                       active === "contact" ? "active" : ""
 //                     }`} onClick={() => setActive("contact")}>Contribute<i style={{marginLeft:"5px"}} class="fa-solid fa-heart"></i></li></Link> */}

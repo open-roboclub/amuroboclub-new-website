@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 import '../assets/ComponentDesign/notice.css';
 import Footer from '../components/Footer';
 import NoticeModal from '../components/NoticeModal';
+import Loading from '../components/LoadingStyle';
+import Location from '../components/Location';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const Notices = () => {
 
- 
+  const [isLoading, setIsLoading] = useState(true);
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
@@ -32,7 +35,7 @@ opacity: 0.97,
   
   setNotices(data);
   
-  
+  setIsLoading(false) 
   
     }
     useEffect(() => {
@@ -73,15 +76,62 @@ const [tempdata, setTempdata]= useState([]);
     <div style={myStyle}>
       
     <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
-<a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
-</nav> 
+
+ 
+<a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
+
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+
+  <i class="fa-solid fa-bars" style={{color:"white"}}></i>
+</button>
+
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  
+  <ul class="navbar-nav mr-auto" >
+  <li class="nav-item" style={{fontSize:"17px"}}>
+    <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home<i class="fa-solid fa-house" style={{marginLeft:"4px"}}></i></span></a></Link>
+    </li>
+    <li class="nav-item active" style={{fontSize:"17px"}}>
+
+    </li>
+  <li style={{fontSize:"17px", }}>
+  <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
+  </li>
+    
+    
+   
+    <li class="nav-item active"style={{fontSize:"17px", color:"white", userSelect: "none"}}>
+      <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
+    </li>
+   
+   <li style={{fontSize:"17px",}}>
+   <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
+   </li>
+<li style={{fontSize:"17px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+
+   
+    
+
+  </ul>
+
+
+
+</div>
+
+
+</nav>
+
             <div className="heading_main text_align_center" style={{paddingTop:"25px"}}>
 						   <h1 style={{color:"#E5E4E2", fontWeight:"bold", fontSize:"35px", margin:"0px"}}>Notices</h1>
                         </div>
 
 
-
-
+                        
+{isLoading?<div className='row justify-content-center align-item-center'><Loading/></div>:
 
                         <div class="container container2">
                         {notices.slice(0, 6).map((item, index)=>{
@@ -111,14 +161,14 @@ const [tempdata, setTempdata]= useState([]);
   </div>
   )
 })} 
-</div>
+</div>}
 {
      model === true ? <NoticeModal date={tempdata[1]} eventName={tempdata[2]} details={tempdata[3]} link={tempdata[4]} hide={()=>setModel(false)}/>: ''
    }
 <br/>   
 
     </div>
-    
+    <Location/>
     <Footer/>
    
    

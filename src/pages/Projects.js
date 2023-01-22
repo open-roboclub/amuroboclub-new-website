@@ -7,7 +7,7 @@ import { getDocs, collection} from "firebase/firestore";
 import featuredProjects from '../assets/cms/constants';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Footer from '../components/Footer';
-
+import Loading from '../components/LoadingStyle';
 const Projects = () => {
   const myStyle={
     backgroundImage: 
@@ -19,7 +19,7 @@ opacity: 0.97,
 
 
 
-
+const [isLoading, setIsLoading] = useState(true);
 
 
 
@@ -37,7 +37,7 @@ const data= querySnapshot.docs.map((doc)=>({...doc.data(),}));
 setBlogs(data);
 
 
-console.log(blogs);
+setIsLoading(false) 
 
 
 
@@ -70,16 +70,52 @@ console.log(blogs);
 
 
 
-
     <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-<a class="navbar-brand" href="#"><Link to="/"><img src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
+<a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
+
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+
+  <i class="fa-solid fa-bars" style={{color:"white"}}></i>
+</button>
+
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  
+  <ul class="navbar-nav mr-auto" >
+  <li class="nav-item" style={{fontSize:"17px"}}>
+    <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home<i class="fa-solid fa-house" style={{marginLeft:"4px"}}></i></span></a></Link>
+    </li>
+    <li class="nav-item" style={{fontSize:"17px"}}>
+      <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
+      </li>
+  <li style={{fontSize:"17px", }}>
+  <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
+  </li>
+    
+    
+   
+    <li class="nav-item active"style={{fontSize:"17px", color:"white", userSelect: "none"}}>
+      <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
+    </li>
+   
+   <li style={{fontSize:"17px",}}>
+   <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
+   </li>
+<li style={{fontSize:"17px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+
+   
+    
+
+  </ul>
 
 
 
-
-
+</div>
 
 
 </nav>
@@ -101,8 +137,8 @@ console.log(blogs);
 
 
 
-
-   <section className='py-4 py-lg-5 container'  >
+                      
+  {isLoading ?   <div className='row justify-content-center align-item-center'><Loading/></div>: <section className='py-4 py-lg-5 container'  >
         <div className='row justify-content-center align-item-center'>
          {blogs.map((item, index)=>{
              return(
@@ -135,7 +171,7 @@ console.log(blogs);
        
         </div>
    </section>
- 
+}
    {
      model === true ? <Modals img={tempdata[1]} name={tempdata[2]} description={tempdata[3]} progress={tempdata[4]} teamMembers={tempdata[5]} date={tempdata[6]} hide={()=>setModel(false)}/>: ''
    }
