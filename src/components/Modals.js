@@ -36,7 +36,7 @@ const Modals = (props) => {
       </div>
       <div class="modal-footer">
        
-        <button class="btn8 success" onClick={props.hide}>Close</button>
+        <button type="button" aria-label="Close" data-dismiss="modal" class="btn8 success" onClick={props.hide}>Close</button>
       </div>
     </div>
   </div>

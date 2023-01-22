@@ -7,12 +7,15 @@ import { getDocs, collection} from "firebase/firestore";
 import featuredProjects from '../assets/cms/constants';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Footer from '../components/Footer';
+import '../assets/ComponentDesign/Projects.css';
+import { HashLink } from 'react-router-hash-link';
+import Location from '../components/Location';
 import Loading from '../components/LoadingStyle';
 const Projects = () => {
   const myStyle={
     backgroundImage: 
 "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.97,
+opacity: 0.95,
     // backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
 };
@@ -97,7 +100,9 @@ setIsLoading(false)
   <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
   </li>
     
-    
+  <li class="nav-item" style={{fontSize:"17px"}}>
+    <HashLink smooth to='/#team' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></span></a></HashLink>
+    </li>
    
     <li class="nav-item active"style={{fontSize:"17px", color:"white", userSelect: "none"}}>
       <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
@@ -174,12 +179,14 @@ setIsLoading(false)
         </div>
    </section></AnimationOnScroll>
 }
-   {
-     model === true ? <Modals img={tempdata[1]} name={tempdata[2]} description={tempdata[3]} progress={tempdata[4]} teamMembers={tempdata[5]} date={tempdata[6]} hide={()=>setModel(false)}/>: ''
-   }
+ 
 
    </div>
+   <Location/>
   <Footer/>
+  {
+     model === true ? <Modals img={tempdata[1]} name={tempdata[2]} description={tempdata[3]} progress={tempdata[4]} teamMembers={tempdata[5]} date={tempdata[6]} hide={()=>setModel(false)}/>: ''
+   }
  </>
   )
 }
