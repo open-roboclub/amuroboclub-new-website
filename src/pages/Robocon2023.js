@@ -32,31 +32,31 @@ opacity: 0.95,
 
   
   <ul class="navbar-nav mr-auto" >
-  <li class="nav-item" style={{fontSize:"17px"}}>
+  <li class="nav-item" style={{fontSize:"15px"}}>
     <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home<i class="fa-solid fa-house" style={{marginLeft:"4px"}}></i></span></a></Link>
     </li>
-    <li class="nav-item" style={{fontSize:"17px"}}>
+    <li class="nav-item" style={{fontSize:"15px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
       </li>
-      <li class="nav-item" style={{fontSize:"17px"}}>
+      <li class="nav-item" style={{fontSize:"15px"}}>
     <HashLink smooth to='/#projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-wrench" style={{marginLeft:"4px"}}></i></span></a></HashLink>
     </li>
-  <li style={{fontSize:"17px", }}>
+  <li style={{fontSize:"15px", }}>
   <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
   </li>
     
-  <li class="nav-item" style={{fontSize:"17px"}}>
+  <li class="nav-item" style={{fontSize:"15px"}}>
     <HashLink smooth to='/#team' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></span></a></HashLink>
     </li>
    
-    <li class="nav-item active"style={{fontSize:"17px", color:"white", userSelect: "none"}}>
+    <li class="nav-item active"style={{fontSize:"15px", color:"white", userSelect: "none"}}>
       <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
     </li>
    
-   <li style={{fontSize:"17px",}}>
+   <li style={{fontSize:"15px",}}>
    <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
    </li>
-<li style={{fontSize:"17px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+<li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
 
    
     
