@@ -106,7 +106,7 @@ console.log(blogs);
                    display: "flex",
                    paddingTop: "8px"}}/>
                             <div className="card-body text-center">
-                                   <h5 className="card-title" style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>AMU Nano SAT</h5>
+                                   <h5 className="card-title" style={{textOverflow: "ellipsis", overflow: "hidden", whiteSpace:"nowrap", width:"180px"}}>SS AMU SAT</h5>
                                     <p className="card-text"></p>
                                     
 
