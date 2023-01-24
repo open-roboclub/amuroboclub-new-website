@@ -79,6 +79,11 @@
                 ],
                 "description": "The Robocon is an Asian Oceanian College robot competition, founded in 2002 by Asia-Pacific Broadcasting Union. In the competition robots compete to complete a task within a set period of time. The contest aims to create friendship among young people with similar interests who will lead their countries in the 21st century, as well as help advance engineering and broadcasting technologies in the region. The event is broadcast in many countries through ABU member broadcasters. Each year the competition has different topics, but generally speaking two or more robots must be used to complete the tasks. One of the robots would be manual control while the others are automatic. The best robots usually weight more than 10kg and span in one square meter area. To build the robots, contestants, who are restricted to be undergraduate students, must possess rich knowledge in programming, mechanical design and electronic circuit design."
             }
+          ],
+          "team": [
+            {
+                "alt":"https://res.cloudinary.com/amuroboclub/image/upload/v1674206395/2022-23_website_react/About/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer.png"
+            }
           ]
     }
 ]

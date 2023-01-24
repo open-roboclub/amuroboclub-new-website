@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import content from "../assets/cms/content.json"
 import '../assets/ComponentDesign/Team.css';
 
 const TeamCard = ({ item }) => {
@@ -20,7 +20,7 @@ const TeamCard = ({ item }) => {
       <div class="card-up aqua-gradient"></div>
       <div class="avatar mx-auto white">
         <img src={item.profileImageUrl} class="rounded-circle img-fluid"
-          alt="No image to show" style={{height: "120px", width:"120px", borderRadius:"50%"}}/>
+          alt="Could Not Load Image" style={{height: "120px", width:"120px", borderRadius:"50%"}}/>
       </div>
       <div class="card-body text-center">
         <h4 class="card-title font-weight-bold" style={{color: "rgb(35, 35, 35)", fontSize:"11px"}}>{item.name}</h4>
