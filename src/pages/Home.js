@@ -17,6 +17,7 @@ import Achievements from '../components/Achievements';
 
 import '../assets/ComponentDesign/Navbar.css';
 import '../assets/ComponentDesign/Hover.css';
+import '../assets/ComponentDesign/VerceraButton.css';
 
 // import ParticleBackground from 'react-particle-backgrounds'
 
@@ -157,7 +158,18 @@ opacity: 0.95,
 
 
   
-
+<div class="container-fluid margin-top_50">
+  <div class="row justify-content-center align-items-center d-flex">
+    <div class="col-lg-6 col-sm-12">
+      <div class="text-center">
+        <img  src={require("../assets/images/VerceraLogo.png")} style={{height:"170px", width:"140px", position:"relative", zIndex:1}}/>
+        <h1 style={{color:"white", fontFamily:"Bungee Spice", position:"relative", zIndex:1}}>Registrations For Vercera Are Open</h1>
+      
+<a href='https://vercera-website.vercel.app/' target="_blank"><button class="button-87 mx-auto" role="button" style={{position:"relative", zIndex:1}}>Register Here &nbsp;<i class="fa-solid fa-arrow-up-from-bracket"></i></button></a></div>  
+      
+    </div>
+  </div>
+</div>
 
 
 	{/* <!-- section --> */} 
