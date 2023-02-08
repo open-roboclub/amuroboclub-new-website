@@ -13,7 +13,7 @@ const News = () => {
     const [newsArray, setNewsArray]= useState([]);
 
 useEffect(()=>{
-    fetch("https://newsapi.org/v2/everything?q=robotics OR nanotechnology&apiKey=bc21f72cd1f54a728c1e08c85548fe7f").then(response=>response.json()).then(
+    fetch("https://newsapi.org/v2/everything?q=robotics OR nanotechnology&apiKey="+process.env.REACT_APP_NEWS_API_KEY).then(response=>response.json()).then(
         (data)=>{
             setIsLoading(false)
         setNewsArray(data.articles)})

@@ -125,7 +125,7 @@ opacity: 0.95,
      </li>
 <li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
 
-<li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+{/* <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li> */}
       {/* <li class="nav-item dropdown" style={{fontSize:"15px",}}>
      <a class="nav-link dropdown-toggle hover-underline-animation" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" style={{color:"white",  cursor: "pointer", userSelect: "none"}}>More<i class="fa-solid fa-caret-down" style={{marginLeft:"2px"}}></i></a>
