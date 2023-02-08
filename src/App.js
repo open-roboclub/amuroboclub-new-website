@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contributors from './pages/Contributors';
+import News from './pages/News';
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/robocon2023" element={<Robocon2023/>}/>
           <Route path='/notices' element={<Notices/>}/>
           <Route path='/contributors' element={<Contributors/>}/>
+          <Route path='/news' element={<News/>}/>
         </Routes>
       </Router>
     </div>

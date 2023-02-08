@@ -1,78 +1,34 @@
 import React, {useState, useEffect} from 'react';
-import { getDocs, collection} from "firebase/firestore"; 
-import { db } from '../firebase';
 import { Link } from 'react-router-dom';
-import '../assets/ComponentDesign/notice.css';
+import '../assets/ComponentDesign/News.css';
 import Footer from '../components/Footer';
 import NoticeModal from '../components/NoticeModal';
 import Loading from '../components/LoadingStyle';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { HashLink } from 'react-router-hash-link';
 import Location from '../components/Location';
-import AnchorLink from "react-anchor-link-smooth-scroll";
-const Notices = () => {
 
-  const [isLoading, setIsLoading] = useState(true);
-  const myStyle={
-    backgroundImage: 
-"url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
-opacity: 0.95,
-    // backgroundSize: 'cover',
-    backgroundRepeat: 'repeat',
-};
+const News = () => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [newsArray, setNewsArray]= useState([]);
 
-
-
+useEffect(()=>{
+    fetch("https://newsapi.org/v2/everything?q=robotics OR nanotechnology&apiKey="+process.env.REACT_APP_NEWS_API_KEY).then(response=>response.json()).then(
+        (data)=>{
+            setIsLoading(false)
+        setNewsArray(data.articles)})
+        
+},[])
 
 
-    const [notices,setNotices]=useState([])
-    const fetchnotices=async()=>{
-      const querySnapshot = await getDocs(collection(db, "events"))
-      
-     
-      //doc is document of collection and doc.data() is object in that doc. In book, all objects have been passed with index 0,1..
-  // querySnapshot is an is an array object of docs.
-  
-  const data= querySnapshot.docs.map((doc)=>({...doc.data(),}));
-  
-  setNotices(data);
-  
-  setIsLoading(false) 
-  
-    }
-    useEffect(() => {
-      fetchnotices();
-      }, [])
 
-// notices.map((item)=>{
-//   item.date=  Date.parse(item.date);
-// })
-
-function compare(a, b) {
-  const rankA = a.date;
-  const rankB = b.date;
-
-  let comparison = 0;
-  if (rankA < rankB) {
-    comparison = 1;
-  } else if (rankA > rankB) {
-    comparison = -1;
-  }
-  return comparison;
-}
-
-
-notices.sort(compare);
-
-const [model, setModel]= useState(false);
-const [tempdata, setTempdata]= useState([]);
-
-    const getData = (date, eventName, details, link)=> {
-        let tempData = [date, eventName, details, link];
-        setTempdata(item=> [1, ...tempData])
-        return setModel(true);
-    }
-
+    const myStyle={
+        backgroundImage: 
+    "url('https://res.cloudinary.com/amuroboclub/image/upload/v1673816613/2022-23_website_react/About/background2.jpg')",
+    opacity: 0.95,
+        // backgroundSize: 'cover',
+        backgroundRepeat: 'repeat',
+    };
   return (
     <>
     <div style={myStyle}>
@@ -121,6 +77,7 @@ const [tempdata, setTempdata]= useState([]);
    <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
    </li>
 <li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+
 <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li>
     
 
@@ -134,39 +91,31 @@ const [tempdata, setTempdata]= useState([]);
 </nav>
 
             <div className="heading_main text_align_center" style={{paddingTop:"25px"}}>
-						   <h1 style={{color:"#E5E4E2", fontWeight:"bold", fontSize:"35px", margin:"0px"}}>Notices</h1>
+						   <h1 style={{color:"#E5E4E2", fontWeight:"bold", fontSize:"35px", margin:"0px"}}>Top Tech News</h1>
                         </div>
 
 
                         
 {isLoading?<div className='row justify-content-center align-item-center'><Loading/></div>:
  <AnimationOnScroll animateIn="animate__fadeIn" animateOnce="true"  duration="1.4">
-                        <div class="container container2">
+                        <div class="container container3">
                              
-                        {notices.slice(0, 6).map((item, index)=>{
+                        {newsArray.slice(0, 51).map((item, index)=>{
              return(
              
-  <div class="card card2" key={index}>
+  <div class="card card3" key={index}>
+    {item.urlToImage?<img src={item.urlToImage} class="card-img-top" alt="your-image-description"></img>:<img src="https://res.cloudinary.com/amuroboclub/image/upload/v1675877287/2022-23_website_react/About/imagealt.jpg" class="card-img-top" alt="your-image-description"></img>}
     <div class="card__body">
-      <span class="tag tag-blue" style={{userSelect: "none"}}>{item.date}</span>
-      <h4 style={{ color:"black", fontWeight:"bold", userSelect: "none"}}>{item.eventName}</h4>
-      <p style={{textAlign:"justify", fontWeight:"bold"}} className="trunket">{item.details}</p>
-     {console.log(item.details.length)}
+      <span class="tag tag-blue1" style={{userSelect: "none"}}>{item.publishedAt}</span>
+      <h4 style={{ color:"#c8bfbf", fontWeight:"bold", userSelect: "none", textAlign:"justify"}}>{item.title}</h4>
+      <p style={{textAlign:"justify", fontWeight:"bold", color:"#c8bfbf"}} className="trunket">{item.description}</p>
     </div>
 
-    <div class="card__footer">
-      
-        
-          {item.link?
-          <a href={item.link}>Click for More</a>:""
-                        }
-        
-    
+    <div class="card__footer" >  
+    <div style={{textAlign:"center"}}><a href={item.url} target="_blank" className='hover-underline-animation2'  
+     style={{fontSize:"20px", color:"#c8bfbf", userSelect:"none"}}>View More</a></div>
     </div>
-    {item.details.length>=320?
-    <div style={{textAlign:"center"}}><a href='notice' className='hover-underline-animation1' data-backdrop="true" data-toggle="modal"  data-target="#exampleModalLong2"
-    onClick={()=>getData(item.date, item.eventName, item.details, item.link)} style={{fontSize:"20px", color:"black", userSelect:"none"}}>View More</a></div>:""
-    }    
+  
     <br/>             
   </div>
   )
@@ -178,12 +127,9 @@ const [tempdata, setTempdata]= useState([]);
     </div>
     <Location/>
     <Footer/>
-    {
-     model === true ? <NoticeModal date={tempdata[1]} eventName={tempdata[2]} details={tempdata[3]} link={tempdata[4]} hide={()=>setModel(false)}/>: ''
-   }
    
     </>
   )
 }
 
-export default Notices
+export default News
