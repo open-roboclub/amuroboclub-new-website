@@ -76,7 +76,7 @@ setIsLoading(false)
     <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-<a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
+<a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/Vlogo.png')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
 
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
