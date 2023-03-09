@@ -83,7 +83,7 @@ opacity: 0.95,
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color " >
 
  
-  <a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/logo.jpeg')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
+  <a class="navbar-brand" href="#"><Link to="/"><img  src={ require('../assets/images/Vlogo.png')} style={{borderRadius:"10px", userSelect: "none"}} alt="image" /></Link></a>
 
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -125,7 +125,7 @@ opacity: 0.95,
      </li>
 <li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
 
-<li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+{/* <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li> */}
       {/* <li class="nav-item dropdown" style={{fontSize:"15px",}}>
      <a class="nav-link dropdown-toggle hover-underline-animation" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" style={{color:"white",  cursor: "pointer", userSelect: "none"}}>More<i class="fa-solid fa-caret-down" style={{marginLeft:"2px"}}></i></a>
@@ -158,18 +158,7 @@ opacity: 0.95,
 
 
   
-<div class="container-fluid margin-top_50">
-  <div class="row justify-content-center align-items-center d-flex">
-    <div class="col-lg-6 col-sm-12">
-      <div class="text-center">
-        <img  src={require("../assets/images/VerceraLogo.png")} style={{height:"170px", width:"140px", position:"relative", zIndex:1}}/>
-        <h1 style={{color:"white", fontFamily:"Bungee Spice", position:"relative", zIndex:1}}>Registrations For Vercera Are Open</h1>
-      
-<a href='https://vercera-website.vercel.app/' target="_blank"><button class="button-87 mx-auto" role="button" style={{position:"relative", zIndex:1}}>Register Here &nbsp;<i class="fa-solid fa-arrow-up-from-bracket"></i></button></a></div>  
-      
-    </div>
-  </div>
-</div>
+
 
 
 	{/* <!-- section --> */} 
