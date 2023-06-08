@@ -40,7 +40,7 @@ const SamplePrevArrow=(props)=> {
     const [team, setTeam]= useState([]);
     const [facultyTeam, setFacultyTeam]= useState([]);
 
-const docRef = doc(db, 'teams', 'team_2022-23')
+const docRef = doc(db, 'teams', 'team_2023-24')
 const fac = doc(db, 'teams', 'oBN3RWaWFRu9JCMe5TDO')
 
 // getDoc(docRef).then((doc)=>{
