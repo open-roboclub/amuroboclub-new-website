@@ -72,7 +72,7 @@ console.log(blogs);
             {/* {blogs.filter(blog => featuredProjects.includes(blog.name) ).map((item, index)=>{ */}
                  {/* return( */}
                     {/* Robocon2023 */}
-                    <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' >
+	{/*<div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' >
                     <div className="card p-0 overflow-hidden h-100 shadow align-items-center" >
                     <img className="card-img-top" src={content[0].projectImages[0].image} alt="Card image cap" style={{height: "167px", width: "167px", borderRadius: "50%",
                    display: "flex",
@@ -97,7 +97,7 @@ console.log(blogs);
                                      
                                      <br/>
                                        </div>
-                    </div>
+                    </div>*/}
 
                      {/* AMU Nano SAT */}
                     <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' >
