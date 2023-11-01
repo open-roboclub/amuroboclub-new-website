@@ -98,32 +98,53 @@ opacity: 0.95,
     
     <ul class="navbar-nav mr-auto" >
     <li class="nav-item" style={{fontSize:"15px"}}>
-    <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home<i class="fa-solid fa-house" style={{marginLeft:"4px"}}></i></span></a></Link>
+    <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home
+    </span></a></Link>
     </li>
     <li class="nav-item" style={{fontSize:"15px"}}>
-      <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
+      <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices
+      </span></a></Link>
       </li>
+
+
+
+      
+      <li class="nav-item" style={{fontSize:"15px"}}>
+      <Link to='/upcomingprojects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Project Recruitment
+      </span></a></Link>
+      </li>
+
+
+
+
       <li class="nav-item active" style={{fontSize:"15px"}}>
-      <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-1x fa-wrench" style={{marginLeft:"4px"}}></i></span>
+      <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", userSelect: "none"}}>Featured Projects
+     </span>
           <span class="sr-only">(current)</span>
         </a></AnchorLink>
       </li>
     <li style={{fontSize:"15px", }}>
-    <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter<i class="fa-solid fa-newspaper"style={{marginLeft:"4px"}}></i></span></a>
+    <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter
+    </span></a>
     </li>
+
+   
       
       <li class="nav-item active"style={{fontSize:"15px", color:"white"}}>
-        <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white", userSelect: "none"}}>Team<i class="fa-solid fa-users" style={{marginLeft:"4px"}}></i></AnchorLink></a>
+        <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white", userSelect: "none"}}>Team
+        </AnchorLink></a>
       </li>
      
       <li class="nav-item active"style={{fontSize:"15px", color:"white", userSelect: "none"}}>
-        <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location<i class="fa-solid fa-location-dot" style={{marginLeft:"4px"}}></i></a>
+        <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location
+        </a>
       </li>
      
      <li style={{fontSize:"15px",}}>
-     <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email<i class="fa-solid fa-envelope" style={{marginLeft:"4px"}}></i></span></a></div>
+     <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email
+     </span></a></div>
      </li>
-<li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors<i class="fa-solid fa-heart" style={{marginLeft:"4px"}}></i></span></a></Link></li>
+<li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors</span></a></Link></li>
 
 {/* <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li> */}
       {/* <li class="nav-item dropdown" style={{fontSize:"15px",}}>

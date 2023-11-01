@@ -56,6 +56,11 @@ useEffect(()=>{
     <li class="nav-item" style={{fontSize:"15px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
       </li>
+
+      <li class="nav-item" style={{fontSize:"15px"}}>
+      <Link to='/upcomingprojects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Project Recruitment<i class="fa-solid fa-bell" style={{marginLeft:"4px"}}></i></span></a></Link>
+      </li>
+
     <li class="nav-item active" style={{fontSize:"15px"}}>
     <li class="nav-item" style={{fontSize:"15px"}}>
     <HashLink smooth to='/#projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Featured Projects<i class="fa-solid fa-wrench" style={{marginLeft:"4px"}}></i></span></a></HashLink>
