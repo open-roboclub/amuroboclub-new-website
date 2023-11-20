@@ -144,6 +144,10 @@ const Home = () => {
               <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color: "white", userSelect: "none" }}>Email
               </span></a></div>
             </li>
+            <li class="nav-item" style={{ fontSize: "15px" }}>
+              <a class="nav-link hover-underline-animation" href="#faq-div"><span style={{ color: "white", userSelect: "none" }}>FAQ
+              </span></a>
+            </li>
             <li style={{ fontSize: "15px" }}><Link to='/contributors' > <a class="nav-link hover-underline-animation" href="#"><span style={{ color: "white", userSelect: "none", }}>Contributors</span></a></Link></li>
 
             {/* <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li> */}
@@ -166,7 +170,7 @@ const Home = () => {
         </div>
 
 
-      </nav>
+      </nav >
 
 
 
@@ -184,7 +188,7 @@ const Home = () => {
 
       {/* <!-- section --> */}
 
-      <Introduction />
+      < Introduction />
 
 
 
@@ -306,14 +310,16 @@ const Home = () => {
 
       <ImageSlider />
 
+      <div id='faq-div'>
+        <FAQ />
+      </div>
 
       <div style={{ marginTop: "70px" }}>
         <Footer /></div>
 
 
-      <FAQ />
 
-    </div>
+    </div >
   )
 }
 
