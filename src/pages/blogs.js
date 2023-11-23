@@ -183,8 +183,8 @@ setIsLoading(false)
 
          {blogs.map((item, index)=>{
              return(
-                 <div className='col-11 col-md-3 col-lg-3 mx-4 mb-3' key={index} >
-                 <div className="card p-0 overflow-hidden h-100 shadow align-items-center"  style={{width:"320px",padding:"5px"}}>
+                 <div className='mb-4' key={index} >
+                 <div className="card p-0  h-100 shadow align-items-center"  style={{width:"320px" ,margin:"10px"}}>
                  <img className="card-img-top" src={item.projectImg[0]} alt="Card image cap" style={{height: "174px", width: "170px", borderRadius: "50%",
                 display: "flex",
                 paddingTop: "8px"}}/>

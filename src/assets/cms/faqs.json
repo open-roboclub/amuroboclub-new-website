@@ -1,0 +1,26 @@
+[
+    {
+        "question": "How can I join the robotics club? Is there an application process?",
+        "answer": "You can download the AMURoboclub Android App and join the club from there. A nominal membership fee of Rs. 200/- is charged which gives you access to the club's inventory, experts and exclusive classes as well as discounts on various events we conduct throughout the year."
+    },
+    {
+        "question": "What types of robots does your club build?",
+        "answer": "Our club builds a variety of robot types including wheeled robots, drones, robotic arms, and even robots that can swim underwater! We like taking on new challenges and building different kinds of robots every year."
+    },
+    {
+        "question": "Where can I visit the club?",
+        "answer": "WS-18, Department of Mechnical Engineering, AMU Campus · 090454 14527"
+    },
+    {
+        "question": "What resources or parts does the club provide for building robots?",
+        "answer": "Our club has a parts inventory with things like motors, sensors, controllers and structural materials that members can use for their robot projects. We also have access to 3D printers, laser cutters and a full woodshop to build custom parts."
+    },
+    {
+        "question": "What competitions or events does the club participate in?",
+        "answer": "Each year our club competes in various national competitions (like Smart India Hackathon) as well as international ones like in the ABU Asia-Pacific Robot Contest."
+    },
+    {
+        "question": "Do you have to know how to code or have robotics experience to join?",
+        "answer": "No experience required! Our members have a wide range of skill levels. We teach coding and electronics skills needed so anyone can learn."
+    }
+]
