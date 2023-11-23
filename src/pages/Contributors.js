@@ -62,21 +62,24 @@ console.log(contributors)
 
   
   <ul class="navbar-nav mr-auto" >
-  <li class="nav-item" style={{fontSize:"15px"}}>
+  <li class="nav-item" style={{fontSize:"14px"}}>
     <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home
     </span></a></Link>
     </li>
-    <li class="nav-item" style={{fontSize:"15px"}}>
+    <li class="nav-item" style={{fontSize:"14px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices
       </span></a></Link></li>
 
-      <li class="nav-item" style={{fontSize:"15px"}}>
+      <li class="nav-item" style={{fontSize:"14px"}}>
       <Link to='/upcomingprojects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Project Recruitment
       </span></a></Link>
       </li>
-
+      <li class="nav-item" style={{fontSize:"14px"}}>
+      <Link to='/blogs' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Blogs
+      </span></a></Link>
+      </li>
       
-      <li class="nav-item" style={{fontSize:"15px"}}>
+      <li class="nav-item" style={{fontSize:"14px"}}>
     <HashLink smooth to='/#projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Featured Projects
     </span></a></HashLink>
     </li>
@@ -85,22 +88,22 @@ console.log(contributors)
   </span></a>
   </li>
     
-  <li class="nav-item" style={{fontSize:"15px"}}>
+  <li class="nav-item" style={{fontSize:"14px"}}>
     <HashLink smooth to='/#team' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Team
     </span></a></HashLink>
     </li>
    
-    <li class="nav-item active"style={{fontSize:"15px", color:"white", userSelect: "none"}}>
+    <li class="nav-item active"style={{fontSize:"14px", color:"white", userSelect: "none"}}>
       <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location
      </a>
     </li>
    
-   <li style={{fontSize:"15px",}}>
+   <li style={{fontSize:"14px",}}>
    <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email
  </span></a></div>
    </li>
 
-   <li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors</span></a></Link></li>
+   <li style={{fontSize:"14px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors</span></a></Link></li>
    {/* <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li> */}
    
     

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Robocon2023 from "./pages/Robocon2023";
 import Notices from "./pages/Notices";
 import Upcoming from "./pages/Upcoming"
+
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 import Blogs from "./pages/blogs";
@@ -96,7 +97,7 @@ const App = () => {
           <Route path="/contributors" element={<Contributors />} />
           <Route path="/news" element={<News />} />
           <Route path="/upcomingprojects" element={<Upcoming />} />
-         
+          <Route path="/blogs" element={<Blogs />} />
 
         </Routes>
       </Router>

@@ -14,7 +14,8 @@ import Test from '../components/Test';
 import Benefits from '../components/Benefits';
 import Team from '../components/Team';
 import Achievements from '../components/Achievements';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Upcoming from "../pages/Upcoming"
 import '../assets/ComponentDesign/Navbar.css';
 import '../assets/ComponentDesign/Hover.css';
 import '../assets/ComponentDesign/VerceraButton.css';
@@ -97,11 +98,11 @@ opacity: 0.95,
 
     
     <ul class="navbar-nav mr-auto" >
-    <li class="nav-item" style={{fontSize:"15px"}}>
+    <li class="nav-item" style={{fontSize:"14px"}}>
     <Link to='/' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Home
     </span></a></Link>
     </li>
-    <li class="nav-item" style={{fontSize:"15px"}}>
+    <li class="nav-item" style={{fontSize:"14px"}}>
       <Link to='/notices' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Notices
       </span></a></Link>
       </li>
@@ -109,42 +110,46 @@ opacity: 0.95,
 
 
       
-      <li class="nav-item" style={{fontSize:"15px"}}>
+      <li class="nav-item" style={{fontSize:"14px"}}>
       <Link to='/upcomingprojects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Project Recruitment
+      </span></a></Link>
+      </li>
+
+      <li class="nav-item" style={{fontSize:"14px"}}>
+      <Link to='/blogs' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Blogs
       </span></a></Link>
       </li>
 
 
 
-
-      <li class="nav-item active" style={{fontSize:"15px"}}>
+      <li class="nav-item active" style={{fontSize:"14px"}}>
       <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{color:"white", userSelect: "none"}}>Featured Projects
      </span>
           <span class="sr-only">(current)</span>
         </a></AnchorLink>
       </li>
-    <li style={{fontSize:"15px", }}>
+    <li style={{fontSize:"14px", }}>
     <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter
     </span></a>
     </li>
 
    
       
-      <li class="nav-item active"style={{fontSize:"15px", color:"white"}}>
+      <li class="nav-item active"style={{fontSize:"14px", color:"white"}}>
         <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{color:"white", userSelect: "none"}}>Team
         </AnchorLink></a>
       </li>
      
-      <li class="nav-item active"style={{fontSize:"15px", color:"white", userSelect: "none"}}>
+      <li class="nav-item active"style={{fontSize:"14px", color:"white", userSelect: "none"}}>
         <a class="nav-link hover-underline-animation" href="#"  data-backdrop="false" type="button"  data-toggle="modal" data-target="#modalRegular">Location
         </a>
       </li>
      
-     <li style={{fontSize:"15px",}}>
+     <li style={{fontSize:"14px",}}>
      <div><a class="nav-link hover-underline-animation " href="mailto:amuroboclub@gmail.com"><span style={{ color:"white", userSelect: "none"}}>Email
      </span></a></div>
      </li>
-<li style={{fontSize:"15px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors</span></a></Link></li>
+<li style={{fontSize:"14px"}}><Link to='/contributors' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>Contributors</span></a></Link></li>
 
 {/* <li style={{fontSize:"15px"}}><Link to='/news' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none", }}>News<i class="fa-solid fa-radio" style={{marginLeft:"4px"}}></i></span></a></Link></li> */}
       {/* <li class="nav-item dropdown" style={{fontSize:"15px",}}>
@@ -169,7 +174,8 @@ opacity: 0.95,
 </nav>
 
 
-   
+<div style={{backgroundColor:"whitesmoke" ,padding:"5px",marginTop:"40px",margin:"10px"}}><marquee behavior="" direction="" style={{color:"black",fontSize:"1.3rem"}}><Link to='/blogs'><em>Checkout Our Blogs Page</em></Link></marquee></div>
+ 
 
 
 

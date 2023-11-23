@@ -22,6 +22,8 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-particle-backgrounds": "^1.0.4",
+    "react-pdf": "^7.5.1",
+    "react-pdf-viewer": "^0.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-responsive-modal": "^6.4.1",
     "react-router-dom": "^6.5.0",
