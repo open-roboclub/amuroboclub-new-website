@@ -184,7 +184,7 @@ console.log(facultyTeam)
     </ul>
     
     <div className="team" id="team">
-       <div className="heading_main text_align_center" style={{paddingTop:"20px", marginBottom: -10}}>
+       <div className="heading_main text_align_center" style={{paddingTop:"20px", marginBottom: '-10'}}>
 						   <h2 style={{color:"#E5E4E2"}}>Our Team</h2>
                         </div>
 

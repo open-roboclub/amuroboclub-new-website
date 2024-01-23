@@ -107,10 +107,10 @@ const Home = () => {
               </span></a></Link>
             </li>
 
-      <li class="nav-item" style={{fontSize:"13px"}}>
-      <Link to='/blogs' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Blogs
-      </span></a></Link>
-      </li>
+            <li class="nav-item" style={{ fontSize: "13px" }}>
+              <Link to='/blogs' > <a class="nav-link hover-underline-animation" href="#"><span style={{ color: "white", userSelect: "none" }}>Blogs
+              </span></a></Link>
+            </li>
 
 
 
@@ -124,10 +124,10 @@ const Home = () => {
 
 
             <li class="nav-item active" style={{ fontSize: "13px" }}>
-              <AnchorLink href='#projects'><a class="nav-link hover-underline-animation" href="#" ><span style={{ color: "white", userSelect: "none" }}>Featured Projects
+              <Link to='/projects'><a class="nav-link hover-underline-animation" href="/projects" ><span style={{ color: "white", userSelect: "none" }}>Projects
               </span>
-                <span class="sr-only">(current)</span>
-              </a></AnchorLink>
+
+              </a></Link>
             </li>
             <li style={{ fontSize: "13px", }}>
               <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{ color: "white", userSelect: "none" }}>Newsletter
@@ -136,9 +136,16 @@ const Home = () => {
 
 
 
-            <li class="nav-item active" style={{ fontSize: "14px", color: "white" }}>
+            <li class="nav-item active" style={{ fontSize: "13px", color: "white" }}>
               <a class="nav-link hover-underline-animation" href="#"><AnchorLink href='#team' style={{ color: "white", userSelect: "none" }}>Team
               </AnchorLink></a>
+            </li>
+
+            <li class="nav-item active" style={{ fontSize: "13px" }}>
+              <a class="nav-link hover-underline-animation"href="https://amu-sat.github.io/"  ><span style={{ color: "white", userSelect: "none" }}>AmuSat
+              </span>
+
+              </a>
             </li>
 
             <li class="nav-item active" style={{ fontSize: "14px", color: "white", userSelect: "none" }}>
@@ -180,9 +187,9 @@ const Home = () => {
 
 
 
-    <div style={{backgroundColor:"whitesmoke",margin:"20px"}}>
-      <marquee behavior="" direction="" style={{fontSize:"1.2rem"}}><Link to='/blogs'>Check out our Blogs Page</Link></marquee>
-    </div>
+      <div style={{ backgroundColor: "whitesmoke", margin: "20px" }}>
+        <marquee behavior="" direction="" style={{ fontSize: "1.2rem" }}><Link to='/blogs'>Check out our Blogs Page</Link></marquee>
+      </div>
 
 
 
@@ -265,7 +272,7 @@ const Home = () => {
 
 
 
-      <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true" duration="0.7">
+      {/* <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true" duration="0.7">
         <Achievements /></AnimationOnScroll>
       <div className="heading_main text_align_center" style={{ paddingTop: "135px", paddingBottom: "0px" }}>
         <h2 style={{ color: "#E5E4E2" }}>Featured Projects</h2>
@@ -274,7 +281,7 @@ const Home = () => {
 
       <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true" duration="0.8">
         <Cards />
-      </AnimationOnScroll>
+      </AnimationOnScroll> */}
 
 
 
@@ -282,7 +289,7 @@ const Home = () => {
 
 
 
-
+      {/* 
       <div class="section margin-top_50 silver_bg" id='benefits'>
         <div class="container">
           <div class="row">
@@ -292,7 +299,7 @@ const Home = () => {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 

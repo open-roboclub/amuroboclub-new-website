@@ -65,9 +65,9 @@ console.log(blogs);
 
   return (
     <>
-       <div id='projects'>
+       {/* <div id='projects'>
       
-      <section className='py-4 py-lg-5 container'  >
+      {/* <section className='py-4 py-lg-5 container'  >
            <div className='row justify-content-center align-item-center'>
             {/* {blogs.filter(blog => featuredProjects.includes(blog.name) ).map((item, index)=>{ */}
                  {/* return( */}
@@ -100,7 +100,7 @@ console.log(blogs);
                     </div>*/}
 
                      {/* AMU Nano SAT */}
-                    <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' >
+                    {/* <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4' >
                     <div className="card p-0 overflow-hidden h-100 shadow align-items-center" >
                     <img className="card-img-top" src={content[0].projectImages[1].image} alt="Card image cap" style={{height: "167px", width: "167px", borderRadius: "50%",
                    display: "flex",
@@ -125,24 +125,24 @@ console.log(blogs);
                                      
                                      <br/>
                                        </div>
-                    </div>
+                    </div> */}
                 {/* // ) */}
-            {/* // })} */}
+            {/* // })}
           
            </div>
-      </section>
+      </section> 
 
     
  
-      </div>
-     
+      </div> 
+      */}
 						   
                         
-         <div class="row">
+         {/* <div class="row">
            
          <div className="heading_main text_align_center" >
          <Link to="/projects" style={{ fontDecoration: "none" }}>  <button type="button" className="btn10 success"> More Projects </button></Link></div>
-         </div>
+         </div> */}
       
     </>
   )

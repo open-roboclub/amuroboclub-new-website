@@ -24,7 +24,7 @@ const Modals = (props) => {
         </button>
       </div>
       <div class="modal-body">
-      <img src={props.img} className="img-fluid" style={{marginBottom:"14px", borderRadius:"20px"}} />
+      <img src={props.img} className="img-fluid"alt="sui" style={{marginBottom:"14px", borderRadius:"20px"}} />
       <p style={{fontSize:"12px", color:"white"}}>Completion Date: {props.date}</p>
       <p style={{marginLeft:"13px", marginRight:"13px", color:"white", textAlign: "justify"}}>{props.description}</p>
       {

@@ -5,7 +5,7 @@ import data from '../assets/cms/faqs.json'
 export default function FAQ() {
     return (
         <div className='container'>
-            <h1 className="headings">FAQs</h1>
+            <h1 className="headings" style={{textAlign:"center"}}>FAQs</h1>
             <div className="q-container">
                 {data.map(item => (
                     <FAQCard question={item.question} answer={item.answer} />

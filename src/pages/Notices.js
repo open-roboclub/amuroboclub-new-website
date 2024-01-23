@@ -113,10 +113,13 @@ const [tempdata, setTempdata]= useState([]);
       </li>
 
     <li class="nav-item active" style={{fontSize:"14px"}}>
-    <li class="nav-item" style={{fontSize:"15px"}}>
-    <HashLink smooth to='/#projects' > <a class="nav-link hover-underline-animation"  href="#"><span style={{color:"white", userSelect: "none"}}>Featured Projects
-    </span></a></HashLink>
-    </li>
+    
+    <li class="nav-item active" style={{ fontSize: "13px" }}>
+              <Link to='/projects'><a class="nav-link hover-underline-animation" href="/projects" ><span style={{ color: "white", userSelect: "none" }}>Projects
+              </span>
+                
+              </a></Link>
+            </li>
     </li>
   <li style={{fontSize:"14px", }}>
   <a class="nav-link hover-underline-animation" target="blank" href="https://drive.google.com/file/d/1sML0h9K8s9u33vSQpi0LGo_mfQyqLxo_/view?usp=sharing"><span style={{color:"white", userSelect: "none"}}>Newsletter
