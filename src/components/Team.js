@@ -33,7 +33,7 @@ const Team = () => {
   const [team, setTeam] = useState([]);
   const [facultyTeam, setFacultyTeam] = useState([]);
 
-  const docRef = doc(db, "teams", "team_2023-24");
+  const docRef = doc(db, "teams", "team_2024-25");
   const fac = doc(db, "teams", "oBN3RWaWFRu9JCMe5TDO");
 
   // getDoc(docRef).then((doc)=>{
